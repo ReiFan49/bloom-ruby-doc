@@ -94,7 +94,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>basic response class. everything will be inherited from here.</p>
+<p>Basic response class. Response class inheritance base from this class. Upon consuming <span class='object_link'><a href="../EndpointDefiner.html#define_endpoint-instance_method" title="Imgur::EndpointDefiner#define_endpoint (method)">EndpointDefiner#define_endpoint</a></span> with proper <code>response_type</code> option. A response class will be generated upon definition to proxy the output into the model.</p>
 
 
   </div>
@@ -112,7 +112,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#result-instance_method" title="#result (instance method)">#<strong>result</strong>  &#x21d2; void </a>
+      <a href="#result-instance_method" title="#result (instance method)">#<strong>result</strong>  &#x21d2; Array&lt;Object&gt;, ... </a>
     
 
     
@@ -132,7 +132,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute result.</p>
+<p>Processed API result.</p>
 </div></span>
   
 </li>
@@ -141,7 +141,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#status-instance_method" title="#status (instance method)">#<strong>status</strong>  &#x21d2; void </a>
+      <a href="#status-instance_method" title="#status (instance method)">#<strong>status</strong>  &#x21d2; Integer </a>
     
 
     
@@ -161,7 +161,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute status.</p>
+<p>Status code of request.</p>
 </div></span>
   
 </li>
@@ -170,7 +170,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#success-instance_method" title="#success (instance method)">#<strong>success</strong>  &#x21d2; void </a>
+      <a href="#success-instance_method" title="#success (instance method)">#<strong>success</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -190,7 +190,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute success.</p>
+<p>Success flag of request.</p>
 </div></span>
   
 </li>
@@ -259,7 +259,27 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Raw JSON data to process. Model that underlies a <span class='object_link'>MultiResultResponse</span> class supports deserialization JSON data into specific Response model.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div>
 </div>
@@ -274,7 +294,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="result-instance_method">
   
-    #<strong>result</strong>  &#x21d2; <tt>void</tt>  <span class="extras">(readonly)</span>
+    #<strong>result</strong>  &#x21d2; <tt>Array&lt;Object&gt;</tt>, ...  <span class="extras">(readonly)</span>
   
 
   
@@ -283,13 +303,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute result.</p>
+<p>Returns Processed API result.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Object&gt;</tt>, <tt>Array&lt;Hash&gt;</tt>, <tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Processed API result</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 </div>
@@ -299,7 +337,7 @@
       <div class="method_details ">
   <h3 class="signature " id="status-instance_method">
   
-    #<strong>status</strong>  &#x21d2; <tt>void</tt>  <span class="extras">(readonly)</span>
+    #<strong>status</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -308,13 +346,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute status.</p>
+<p>Returns status code of request.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>status code of request</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 </div>
@@ -324,7 +380,7 @@
       <div class="method_details ">
   <h3 class="signature " id="success-instance_method">
   
-    #<strong>success</strong>  &#x21d2; <tt>void</tt>  <span class="extras">(readonly)</span>
+    #<strong>success</strong>  &#x21d2; <tt>Boolean</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -333,13 +389,31 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute success.</p>
+<p>Returns success flag of request.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>success flag of request</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
 </div>
@@ -350,7 +424,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 22 02:27:30 2022 by
+  Generated on Wed Jun 22 03:53:56 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc
