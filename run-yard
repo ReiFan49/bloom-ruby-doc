@@ -5,7 +5,7 @@ require 'osu-api/yard_ext'
 require 'ruby-imgur/yard_ext'
 
 # library to include configuration
-library_list = %w(osu-api ruby-imgur)
+library_list = %w(osu-ruby2 osu-api ruby-imgur)
 location_list = library_list.map do |lib|
   Gem.find_files(lib).map do |lib_file|
     dir = Pathname.new File.dirname(lib_file)

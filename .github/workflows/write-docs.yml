@@ -1,8 +1,15 @@
 name: Update Repository Documents
 on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'run-yard'
+    - 'Gemfile'
+    - 'yard-config/**'
   repository_dispatch:
     types:
-      - update-gem
+    - update-gem
   workflow_dispatch:
 concurrency:
   group: ci-write-docs
