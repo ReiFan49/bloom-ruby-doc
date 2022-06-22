@@ -32,7 +32,9 @@ jobs:
         bundle exec ruby run-yard stats --list-undoc
     - name: YARD Gem Write
       run: |
-        bundle exec ruby run-yard doc
+        bundle exec ruby run-yard doc -r yard-config/README.md \
+          -p yard-config/templates/reidoc \
+          --hide-void-return
     - name: Commit to Docs
       working-directory: ./doc
       run: |
