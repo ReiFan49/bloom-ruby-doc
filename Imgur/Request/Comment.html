@@ -133,7 +133,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_comment_reply-instance_method" title="#create_comment_reply (instance method)">#<strong>create_comment_reply</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#create_comment_reply-instance_method" title="#create_comment_reply (instance method)">#<strong>create_comment_reply</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -157,7 +157,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_comment-instance_method" title="#delete_comment (instance method)">#<strong>delete_comment</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#delete_comment-instance_method" title="#delete_comment (instance method)">#<strong>delete_comment</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -181,7 +181,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#do_comment_report-instance_method" title="#do_comment_report (instance method)">#<strong>do_comment_report</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#do_comment_report-instance_method" title="#do_comment_report (instance method)">#<strong>do_comment_report</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -205,7 +205,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#do_comment_vote-instance_method" title="#do_comment_vote (instance method)">#<strong>do_comment_vote</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#do_comment_vote-instance_method" title="#do_comment_vote (instance method)">#<strong>do_comment_vote</strong>(body = nil, id:, vote:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -229,7 +229,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_comment-instance_method" title="#get_comment (instance method)">#<strong>get_comment</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_comment-instance_method" title="#get_comment (instance method)">#<strong>get_comment</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -253,7 +253,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_comment_replies-instance_method" title="#get_comment_replies (instance method)">#<strong>get_comment_replies</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_comment_replies-instance_method" title="#get_comment_replies (instance method)">#<strong>get_comment_replies</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -333,7 +333,7 @@
       <div class="method_details ">
   <h3 class="signature " id="create_comment_reply-instance_method">
   
-    #<strong>create_comment_reply</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>create_comment_reply</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -353,41 +353,21 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>id</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/comment/:id</code></p>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -414,7 +394,7 @@
       <div class="method_details ">
   <h3 class="signature " id="delete_comment-instance_method">
   
-    #<strong>delete_comment</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>delete_comment</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -434,41 +414,21 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>id</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/comment/:id</code></p>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -495,7 +455,7 @@
       <div class="method_details ">
   <h3 class="signature " id="do_comment_report-instance_method">
   
-    #<strong>do_comment_report</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>do_comment_report</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -515,41 +475,21 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>id</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/comment/:id/report</code></p>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -576,7 +516,7 @@
       <div class="method_details ">
   <h3 class="signature " id="do_comment_vote-instance_method">
   
-    #<strong>do_comment_vote</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>do_comment_vote</strong>(body = nil, id:, vote:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -596,50 +536,37 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>id</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/comment/:id/vote/:vote</code></p>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>vote</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">vote</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -666,7 +593,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_comment-instance_method">
   
-    #<strong>get_comment</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_comment</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -686,41 +613,21 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>id</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/comment/:id</code></p>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -747,7 +654,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_comment_replies-instance_method">
   
-    #<strong>get_comment_replies</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_comment_replies</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -767,41 +674,21 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>id</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/comment/:id/replies</code></p>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -830,7 +717,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 22 03:53:55 2022 by
+  Generated on Wed Jun 22 05:39:31 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

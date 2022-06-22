@@ -117,7 +117,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_account_album-instance_method" title="#delete_account_album (instance method)">#<strong>delete_account_album</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#delete_account_album-instance_method" title="#delete_account_album (instance method)">#<strong>delete_account_album</strong>(body = nil, username:, id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -141,7 +141,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_album-instance_method" title="#get_account_album (instance method)">#<strong>get_account_album</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_album-instance_method" title="#get_account_album (instance method)">#<strong>get_account_album</strong>(body = nil, username:, id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -165,7 +165,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_album_count-instance_method" title="#get_account_album_count (instance method)">#<strong>get_account_album_count</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_album_count-instance_method" title="#get_account_album_count (instance method)">#<strong>get_account_album_count</strong>(body = nil, username:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -189,7 +189,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_album_ids-instance_method" title="#get_account_album_ids (instance method)">#<strong>get_account_album_ids</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_album_ids-instance_method" title="#get_account_album_ids (instance method)">#<strong>get_account_album_ids</strong>(body = nil, username:, page:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -213,7 +213,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_albums-instance_method" title="#get_account_albums (instance method)">#<strong>get_account_albums</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_albums-instance_method" title="#get_account_albums (instance method)">#<strong>get_account_albums</strong>(body = nil, username:, page:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -252,7 +252,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="delete_account_album-instance_method">
   
-    #<strong>delete_account_album</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>delete_account_album</strong>(body = nil, username:, id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -272,50 +272,37 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>username</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/account/:username/album/:id</code></p>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">username</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -342,7 +329,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_album-instance_method">
   
-    #<strong>get_account_album</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_album</strong>(body = nil, username:, id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -362,50 +349,37 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>username</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/account/:username/album/:id</code></p>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">username</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -432,7 +406,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_album_count-instance_method">
   
-    #<strong>get_account_album_count</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_album_count</strong>(body = nil, username:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -452,41 +426,21 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>username</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/account/:username/albums/count</code></p>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">username</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -513,7 +467,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_album_ids-instance_method">
   
-    #<strong>get_account_album_ids</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_album_ids</strong>(body = nil, username:, page:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -530,6 +484,38 @@
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
+  
+    <li>
+      
+        <span class='name'>username</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>page</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
   
     <li>
       
@@ -554,20 +540,15 @@
     
     
     
+    
+    
+    
+    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">username</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">page</span>
+          <span class="name">page?</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -603,7 +584,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_albums-instance_method">
   
-    #<strong>get_account_albums</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_albums</strong>(body = nil, username:, page:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -620,6 +601,38 @@
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
+  
+    <li>
+      
+        <span class='name'>username</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>page</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
   
     <li>
       
@@ -644,20 +657,15 @@
     
     
     
+    
+    
+    
+    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">username</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">page</span>
+          <span class="name">page?</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -695,7 +703,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 22 03:53:55 2022 by
+  Generated on Wed Jun 22 05:39:31 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

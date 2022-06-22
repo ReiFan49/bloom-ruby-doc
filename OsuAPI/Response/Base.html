@@ -87,39 +87,65 @@
   
   
   
-  <dl>
-      <dt>Includes:</dt>
-      <dd>Enumerable</dd>
-  </dl>
-  
   
 
   
 </div>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Basic response class. Response class inheritance base from this class. Upon consuming <code>define_endpoint</code> with proper <code>response_type</code> option. A response class will be generated upon definition to proxy the output into the model.</p>
 
-  
-    <h2>
-      Constant Summary
-      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
-    </h2>
 
-    <dl class="constants">
-      
-        <dt id="CONVERT_TYPE-constant" class="">CONVERT_TYPE =
-          
-        </dt>
-        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
-      
-        <dt id="CONVERT_ENTRY-constant" class="">CONVERT_ENTRY =
-          
-        </dt>
-        <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
-      
-    </dl>
+  </div>
+</div>
+<div class="tags">
   
 
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="../EndpointDefiner.html#define_endpoint-instance_method" title="OsuAPI::EndpointDefiner#define_endpoint (method)">how to define a subclass of Response::Base properly. Documentation will be released once the separate library to generalize the work of endpoint is done.</a></span></li>
+    
+  </ul>
+
+</div>
 
 
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#result-instance_method" title="#result (instance method)">#<strong>result</strong>  &#x21d2; Array&lt;Object&gt;, ... </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Processed API result.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
 
 
 
@@ -131,50 +157,6 @@
     </h2>
 
     <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#as_json-instance_method" title="#as_json (instance method)">#<strong>as_json</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
       
         <li class="public ">
   <span class="summary_signature">
@@ -202,121 +184,10 @@
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#method_missing-instance_method" title="#method_missing (instance method)">#<strong>method_missing</strong>(m, *a, **b, &amp;c)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_a-instance_method" title="#to_a (instance method)">#<strong>to_a</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_ary-instance_method" title="#to_ary (instance method)">#<strong>to_ary</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_h-instance_method" title="#to_h (instance method)">#<strong>to_h</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
     </ul>
   
 
-
-  <div id="constructor_details" class="method_details_list">
+<div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
@@ -337,116 +208,86 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Raw JSON data to process. Model that underlies a <code>MultiResultResponse</code> class supports deserialization JSON data into specific Response model.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 
 </div>
 </div>
   
 </div>
-<div id="method_missing_details" class="method_details_list">
-  <h2>Dynamic Method Handling</h2>
-  <p class="notice this">
-    This class handles dynamic methods through the <tt>method_missing</tt> method
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
     
-  </p>
-  
-    <div class="method_details first">
-  <h3 class="signature first" id="method_missing-instance_method">
-  
-    #<strong>method_missing</strong>(m, *a, **b, &amp;c)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3>
-</div>
-  
-</div>
-
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
+      
+      <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="[]-instance_method">
+  <h3 class="signature first" id="result-instance_method">
   
-    #<strong>[]</strong>(key)  &#x21d2; <tt>Object</tt> 
-  
-
+    #<strong>result</strong>  &#x21d2; <tt>Array&lt;Object&gt;</tt>, ...  <span class="extras">(readonly)</span>
   
 
   
-</h3>
-</div>
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
     
-      <div class="method_details ">
-  <h3 class="signature " id="as_json-instance_method">
-  
-    #<strong>as_json</strong>  &#x21d2; <tt>Object</tt> 
-  
+<p>Returns Processed API result.</p>
 
-  
 
-  
-</h3>
+  </div>
 </div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_a-instance_method">
+<div class="tags">
   
-    #<strong>to_a</strong>  &#x21d2; <tt>Object</tt> 
+<p class="tag_title">Returns:</p>
+<ul class="return">
   
-
-  
-
-  
-</h3>
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Object&gt;</tt>, <tt>Array&lt;Hash&gt;</tt>, <tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Processed API result</p>
 </div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_ary-instance_method">
+      
+    </li>
   
-    #<strong>to_ary</strong>  &#x21d2; <tt>Object</tt> 
-  
+</ul>
 
-  
-
-  
-</h3>
 </div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_h-instance_method">
-  
-    #<strong>to_h</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_hash-instance_method">
-  
-    #<strong>to_hash</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3>
 </div>
     
   </div>
 
+
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 22 03:53:56 2022 by
+  Generated on Wed Jun 22 05:39:32 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

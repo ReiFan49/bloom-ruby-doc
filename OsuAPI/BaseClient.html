@@ -97,12 +97,10 @@
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'>
-<p>Any inputs won&#39;t be validated. Please understand that any kind of input will be sent</p>
+<p>Any inputs won&#39;t be validated. Please understand that any kind of input will be sent to the server. So please test your request on other application beforehand.</p>
 </div>
   </div>
 
-
-<p>to the server. So please test your request on other application beforehand.</p>
 
 
   </div>
@@ -138,7 +136,7 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span>
-  <span class='label'>faraday:</span> <span class='symbol'>:process_faraday_request</span>
+  <span class='label'>faraday:</span> <span class='symbol'>:process_faraday_request</span><span class='comma'>,</span>
 <span class='rbrace'>}</span></pre></dd>
       
     </dl>
@@ -161,7 +159,31 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#base_url-class_method" title="base_url (class method)">.<strong>base_url</strong>  &#x21d2; Object </a>
+      <a href="#base_url-class_method" title="base_url (class method)">.<strong>base_url</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>get class&#39; base url.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>(data)  &#x21d2; BaseClient </a>
     
 
     
@@ -183,7 +205,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>(data)  &#x21d2; Object </a>
+      <a href="#inherit-class_method" title="inherit (class method)">.<strong>inherit</strong>(cls)  </a>
     
 
     
@@ -197,29 +219,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#inherit-class_method" title="inherit (class method)">.<strong>inherit</strong>(cls)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>clone required constants for subclass.</p>
+</div></span>
   
 </li>
 
@@ -350,19 +352,43 @@
       <div class="method_details first">
   <h3 class="signature first" id="base_url-class_method">
   
-    .<strong>base_url</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>base_url</strong>  &#x21d2; <tt>String</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>get class&#39; base url</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="create-class_method">
   
-    .<strong>create</strong>(data)  &#x21d2; <tt>Object</tt> 
+    .<strong>create</strong>(data)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuAPI::BaseClient (class)">BaseClient</a></span></tt> 
   
 
   
@@ -376,11 +402,24 @@
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="OsuAPI::BaseClient (class)">BaseClient</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li>#new</li>
+      <li><span class='object_link'><a href="#initialize-instance_method" title="OsuAPI::BaseClient#initialize (method)">#initialize</a></span></li>
     
   </ul>
 
@@ -390,13 +429,24 @@
       <div class="method_details ">
   <h3 class="signature " id="inherit-class_method">
   
-    .<strong>inherit</strong>(cls)  &#x21d2; <tt>Object</tt> 
+    .<strong>inherit</strong>(cls)  
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>clone required constants for subclass</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 </div>
     
   </div>
@@ -480,7 +530,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 22 03:53:55 2022 by
+  Generated on Wed Jun 22 05:39:32 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

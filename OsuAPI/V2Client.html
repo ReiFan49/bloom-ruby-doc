@@ -91,7 +91,7 @@
   
   <dl>
       <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="RequestsV2/Beatmap.html" title="OsuAPI::RequestsV2::Beatmap (module)">RequestsV2::Beatmap</a></span></dd>
+      <dd><span class='object_link'><a href="RequestV2/Beatmap.html" title="OsuAPI::RequestV2::Beatmap (module)">RequestV2::Beatmap</a></span>, <span class='object_link'><a href="RequestV2/User.html" title="OsuAPI::RequestV2::User (module)">RequestV2::User</a></span></dd>
   </dl>
   
   
@@ -122,7 +122,40 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#base_url-class_method" title="base_url (class method)">.<strong>base_url</strong>  &#x21d2; Object </a>
+      <a href="#base_url-class_method" title="base_url (class method)">.<strong>base_url</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>get class&#39; base url.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#auto_refresh=-instance_method" title="#auto_refresh= (instance method)">#<strong>auto_refresh=</strong>(value)  </a>
     
 
     
@@ -141,14 +174,51 @@
 </li>
 
       
-    </ul>
-  
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#auto_refresh%3F-instance_method" title="#auto_refresh? (instance method)">#<strong>auto_refresh?</strong>  &#x21d2; Boolean </a>
+    
 
-    <ul class="summary">
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Auto refresh token upon expiry.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#auto_refresh_callback=-instance_method" title="#auto_refresh_callback= (instance method)">#<strong>auto_refresh_callback=</strong>(fun)  </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -179,7 +249,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>(data)  &#x21d2; Object </a>
+      <a href="#refresh_token-instance_method" title="#refresh_token (instance method)">#<strong>refresh_token</strong>  </a>
     
 
     
@@ -193,7 +263,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>manually refreshes OAuth token.</p>
+</div></span>
   
 </li>
 
@@ -201,7 +273,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#version-instance_method" title="#version (instance method)">#<strong>version</strong>  &#x21d2; Object </a>
+      <a href="#update-instance_method" title="#update (instance method)">#<strong>update</strong>(data)  </a>
     
 
     
@@ -215,7 +287,33 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>update OAuthClient internals.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version-instance_method" title="#version (instance method)">#<strong>version</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>API version (v2).</p>
+</div></span>
   
 </li>
 
@@ -232,8 +330,8 @@
   
   
   
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="RequestsV2/Beatmap.html" title="OsuAPI::RequestsV2::Beatmap (module)">RequestsV2::Beatmap</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="RequestsV2/Beatmap.html#get_beatmap-instance_method" title="OsuAPI::RequestsV2::Beatmap#get_beatmap (method)">#get_beatmap</a></span>, <span class='object_link'><a href="RequestsV2/Beatmap.html#get_beatmap_scores-instance_method" title="OsuAPI::RequestsV2::Beatmap#get_beatmap_scores (method)">#get_beatmap_scores</a></span>, <span class='object_link'><a href="RequestsV2/Beatmap.html#get_beatmap_user_score-instance_method" title="OsuAPI::RequestsV2::Beatmap#get_beatmap_user_score (method)">#get_beatmap_user_score</a></span>, <span class='object_link'><a href="RequestsV2/Beatmap.html#lookup_beatmap-instance_method" title="OsuAPI::RequestsV2::Beatmap#lookup_beatmap (method)">#lookup_beatmap</a></span></p>
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="RequestV2/User.html" title="OsuAPI::RequestV2::User (module)">RequestV2::User</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="RequestV2/User.html#get_user-instance_method" title="OsuAPI::RequestV2::User#get_user (method)">#get_user</a></span>, <span class='object_link'><a href="RequestV2/User.html#get_user_activity-instance_method" title="OsuAPI::RequestV2::User#get_user_activity (method)">#get_user_activity</a></span>, <span class='object_link'><a href="RequestV2/User.html#get_user_beatmaps-instance_method" title="OsuAPI::RequestV2::User#get_user_beatmaps (method)">#get_user_beatmaps</a></span>, <span class='object_link'><a href="RequestV2/User.html#get_user_kudosu-instance_method" title="OsuAPI::RequestV2::User#get_user_kudosu (method)">#get_user_kudosu</a></span>, <span class='object_link'><a href="RequestV2/User.html#get_user_scores-instance_method" title="OsuAPI::RequestV2::User#get_user_scores (method)">#get_user_scores</a></span>, <span class='object_link'><a href="RequestV2/User.html#get_user_self-instance_method" title="OsuAPI::RequestV2::User#get_user_self (method)">#get_user_self</a></span></p>
 
   
   
@@ -241,6 +339,17 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="RequestV2/Beatmap.html" title="OsuAPI::RequestV2::Beatmap (module)">RequestV2::Beatmap</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="RequestV2/Beatmap.html#get_beatmap-instance_method" title="OsuAPI::RequestV2::Beatmap#get_beatmap (method)">#get_beatmap</a></span>, <span class='object_link'><a href="RequestV2/Beatmap.html#get_beatmap_scores-instance_method" title="OsuAPI::RequestV2::Beatmap#get_beatmap_scores (method)">#get_beatmap_scores</a></span>, <span class='object_link'><a href="RequestV2/Beatmap.html#get_beatmap_user_score-instance_method" title="OsuAPI::RequestV2::Beatmap#get_beatmap_user_score (method)">#get_beatmap_user_score</a></span>, <span class='object_link'><a href="RequestV2/Beatmap.html#lookup_beatmap-instance_method" title="OsuAPI::RequestV2::Beatmap#lookup_beatmap (method)">#lookup_beatmap</a></span></p>
+
   
   
   
@@ -287,13 +396,37 @@
       <div class="method_details first">
   <h3 class="signature first" id="base_url-class_method">
   
-    .<strong>base_url</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>base_url</strong>  &#x21d2; <tt>String</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>get class&#39; base url</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
   </div>
@@ -303,27 +436,213 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="update-instance_method">
+  <h3 class="signature first" id="auto_refresh=-instance_method">
   
-    #<strong>update</strong>(data)  &#x21d2; <tt>Object</tt> 
+    #<strong>auto_refresh=</strong>(value)  
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>set auto refresh flag from truth value of an object</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="auto_refresh?-instance_method">
+  
+    #<strong>auto_refresh?</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns auto refresh token upon expiry.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>auto refresh token upon expiry</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="auto_refresh_callback=-instance_method">
+  
+    #<strong>auto_refresh_callback=</strong>(fun)  
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>fun</span>
+      
+      
+        <span class='type'>(<tt>#call</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>call potential that receives token object.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="refresh_token-instance_method">
+  
+    #<strong>refresh_token</strong>  
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>manually refreshes OAuth token.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    #<strong>update</strong>(data)  
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>update OAuthClient internals.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="version-instance_method">
   
-    #<strong>version</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>version</strong>  &#x21d2; <tt>Integer</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns API version (v2).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>API version (v2)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
   </div>
@@ -331,7 +650,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 22 03:53:55 2022 by
+  Generated on Wed Jun 22 05:39:32 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Module: OsuAPI::RequestsV2::Beatmap
+  Module: OsuAPI::RequestV2::Beatmap
   
     &mdash; Documentation by YARD 0.9.28
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "OsuAPI::RequestsV2::Beatmap";
+  pathId = "OsuAPI::RequestV2::Beatmap";
   relpath = '../../';
 </script>
 
@@ -37,7 +37,7 @@
         <div id="menu">
   
     <a href="../../_index.html">Index (B)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../OsuAPI.html" title="OsuAPI (module)">OsuAPI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RequestsV2.html" title="OsuAPI::RequestsV2 (module)">RequestsV2</a></span></span>
+    <span class='title'><span class='object_link'><a href="../../OsuAPI.html" title="OsuAPI (module)">OsuAPI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RequestV2.html" title="OsuAPI::RequestV2 (module)">RequestV2</a></span></span>
      &raquo; 
     <span class="title">Beatmap</span>
   
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Module: OsuAPI::RequestsV2::Beatmap
+      <div id="content"><h1>Module: OsuAPI::RequestV2::Beatmap
   
   
   
@@ -98,7 +98,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_beatmap-instance_method" title="#get_beatmap (instance method)">#<strong>get_beatmap</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_beatmap-instance_method" title="#get_beatmap (instance method)">#<strong>get_beatmap</strong>(body = nil, beatmap_id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -122,7 +122,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_beatmap_scores-instance_method" title="#get_beatmap_scores (instance method)">#<strong>get_beatmap_scores</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_beatmap_scores-instance_method" title="#get_beatmap_scores (instance method)">#<strong>get_beatmap_scores</strong>(body = nil, beatmap_id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -146,7 +146,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_beatmap_user_score-instance_method" title="#get_beatmap_user_score (instance method)">#<strong>get_beatmap_user_score</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_beatmap_user_score-instance_method" title="#get_beatmap_user_score (instance method)">#<strong>get_beatmap_user_score</strong>(body = nil, beatmap_id:, user_id:, **data)  &#x21d2; JSON </a>
     
 
     
@@ -209,7 +209,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="get_beatmap-instance_method">
   
-    #<strong>get_beatmap</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_beatmap</strong>(body = nil, beatmap_id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -229,41 +229,21 @@
   
     <li>
       
-        <span class='name'>data</span>
+        <span class='name'>beatmap_id</span>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/beatmaps/:beatmap_id</code></p>
+<p><strong>Required</strong></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">beatmap_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-    </ul>
-  
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
@@ -290,7 +270,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_beatmap_scores-instance_method">
   
-    #<strong>get_beatmap_scores</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_beatmap_scores</strong>(body = nil, beatmap_id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -307,6 +287,22 @@
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
+  
+    <li>
+      
+        <span class='name'>beatmap_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
   
     <li>
       
@@ -331,17 +327,10 @@
     
     
     
+    
+    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
-      
-        <li>
-          <span class="name">beatmap_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
       
         <li>
           <span class="name">mode</span>
@@ -398,7 +387,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_beatmap_user_score-instance_method">
   
-    #<strong>get_beatmap_user_score</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_beatmap_user_score</strong>(body = nil, beatmap_id:, user_id:, **data)  &#x21d2; <tt>JSON</tt> 
   
 
   
@@ -415,6 +404,38 @@
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
+  
+    <li>
+      
+        <span class='name'>beatmap_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>user_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p><strong>Required</strong></p>
+</div>
+      
+    </li>
   
     <li>
       
@@ -439,26 +460,12 @@
     
     
     
+    
+    
+    
+    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
-      
-        <li>
-          <span class="name">beatmap_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
-      
-        <li>
-          <span class="name">user_id</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-        </li>
       
         <li>
           <span class="name">mode</span>
@@ -607,7 +614,7 @@
 </div>
 
       <div id="footer">
-  Generated on Wed Jun 22 03:53:55 2022 by
+  Generated on Wed Jun 22 05:39:31 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc
