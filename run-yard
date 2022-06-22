@@ -4,6 +4,7 @@ require 'yard'
 require 'osu-api/yard_ext'
 require 'ruby-imgur/yard_ext'
 
+# library to include configuration
 library_list = %w(osu-api ruby-imgur)
 location_list = library_list.map do |lib|
   Gem.find_files(lib).map do |lib_file|
@@ -15,6 +16,8 @@ location_list = library_list.map do |lib|
     dir.to_s
   end
 end.flatten
+
+# convert available path into globable string
 glob_path = sprintf("{%s}/%s",
   location_list.map do |dir|
     dir.gsub(/[*]{1,2}|[?]|[\[\]{},]/) { |s| "\\#{s}" }
@@ -22,11 +25,8 @@ glob_path = sprintf("{%s}/%s",
   '**/*.rb',
 )
 
+# pass globbable string to arguments and process
 argv = ARGV.dup
 argv << glob_path
-
-#p location_list
-#p argv
-#exit! 1
 
 YARD::CLI::CommandParser.run(*argv)
