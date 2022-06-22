@@ -1,0 +1,43 @@
+name: Update Repository Documents
+on:
+  repository_dispatch:
+    types:
+      - update-gem
+  workflow_dispatch:
+concurrency:
+  group: ci-write-docs
+  cancel-in-progress: true
+jobs:
+  publish-docs:
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GEM_REPO_ACCESS }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Access Documentation Worktree
+      run: |
+        git worktree add doc docs
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+        ruby-version: 2.7
+    - name: Install Gems
+      run: |
+        bundle install
+    - name: YARD Gem Stats
+      run: |
+        bundle exec ruby run-yard stats --list-undoc
+    - name: YARD Gem Write
+      run: |
+        bundle exec ruby run-yard doc
+    - name: Commit to Docs
+      working-directory: ./doc
+      run: |
+        git add .
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git commit -m "$(date -u +'doc generated at %Y%m%d.%H:%M:%S')"
+        git push

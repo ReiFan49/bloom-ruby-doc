@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+require 'pathname'
+require 'yard'
+require 'osu-api/yard_ext'
+require 'ruby-imgur/yard_ext'
+
+library_list = %w(osu-api ruby-imgur)
+location_list = library_list.map do |lib|
+  Gem.find_files(lib).map do |lib_file|
+    dir = Pathname.new File.dirname(lib_file)
+    new_dir = dir.relative_path_from(Pathname.pwd)
+    unless new_dir.to_s.include?('../')
+      dir = new_dir
+    end
+    dir.to_s
+  end
+end.flatten
+glob_path = sprintf("{%s}/%s",
+  location_list.map do |dir|
+    dir.gsub(/[*]{1,2}|[?]|[\[\]{},]/) { |s| "\\#{s}" }
+  end.join(','),
+  '**/*.rb',
+)
+
+argv = ARGV.dup
+argv << glob_path
+
+#p location_list
+#p argv
+#exit! 1
+
+YARD::CLI::CommandParser.run(*argv)
