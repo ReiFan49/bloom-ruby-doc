@@ -1,0 +1,25 @@
+# file format
+# gem-name:
+#   # gem spec, mostly follow in accordance of Gemfile
+#   gem:
+#     version: version spec, can be in array
+#     source: source spec
+#   lib: lib folder name, defaults to gem-name
+#   yard: extra require appended after lib-name
+"osu-ruby2":
+  gem:
+    source:
+      git: "https://github.com/ReiFan49/ruby-osu-library"
+  lib: osu-ruby2
+"osu-api":
+  gem:
+    source:
+      git: "https://github.com/ReiFan49/ruby-osu-api"
+  lib: osu-api
+  yard: yard_ext
+"ruby-imgur":
+  gem:
+    source:
+      git: "https://github.com/ReiFan49/ruby-imgur"
+  lib: ruby-imgur
+  yard: yard_ext

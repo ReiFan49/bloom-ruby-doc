@@ -6,6 +6,7 @@ on:
     paths:
     - 'run-yard'
     - 'Gemfile'
+    - 'gem-lists.yaml'
     - 'yard-config/**'
   repository_dispatch:
     types:

@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 require 'pathname'
+require 'yaml'
 require 'yard'
-require 'osu-api/yard_ext'
-require 'ruby-imgur/yard_ext'
+
+# fetch gem lists from yaml file for easy mod.
+gem_lists = YAML.load(File.read(__dir__ + '/gem-lists.yaml'))
 
 # library to include configuration
-library_list = %w(osu-ruby2 osu-api ruby-imgur)
-location_list = library_list.map do |lib|
+location_list = gem_lists.keys.map do |lib|
   Gem.find_files(lib).map do |lib_file|
     dir = Pathname.new File.dirname(lib_file)
     new_dir = dir.relative_path_from(Pathname.pwd)
@@ -24,6 +25,14 @@ glob_path = sprintf("{%s}/%s",
   end.join(','),
   '**/*.rb',
 )
+
+# apply extra yard require from here
+gem_lists.each do |gem_name, gem_opt|
+  lib_name = gem_opt.fetch('lib', gem_name)
+  next unless gem_opt.key?('yard')
+  yard_lib = File.join(lib_name, gem_opt['yard'])
+  require yard_lib
+end
 
 # pass globbable string to arguments and process
 argv = ARGV.dup
