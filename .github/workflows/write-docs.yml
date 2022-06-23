@@ -7,6 +7,7 @@ on:
     - 'run-yard'
     - 'Gemfile'
     - 'gem-lists.yaml'
+    - '.github/workflows/write-docs.yaml'
     - 'yard-config/**'
   repository_dispatch:
     types:
@@ -33,6 +34,10 @@ jobs:
       with:
         bundler-cache: true
         ruby-version: 2.7
+    - name: Check Vendor Cache
+      run: |
+        [[ ! -f vendor/bundle/.write-cached ]]
+        echo "IGNORE_DOC_OVERRIDE=$?" >> $GITHUB_ENV
     - name: Install Gems
       run: |
         bundle install
@@ -40,10 +45,12 @@ jobs:
       run: |
         bundle exec ruby run-yard stats --list-undoc
     - name: YARD Gem Write
+      if: ${{ env.IGNORE_DOC_OVERRIDE == '0' }}
       run: |
         bundle exec ruby run-yard doc -r yard-config/README.md \
           -p yard-config/templates/reidoc \
           --hide-void-return
+        touch vendor/bundle/.write-cached
     - name: Commit to Docs
       working-directory: ./doc
       continue-on-error: true
