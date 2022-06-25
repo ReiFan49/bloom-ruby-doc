@@ -13,6 +13,7 @@ on:
     types:
     - update-gem
   workflow_dispatch:
+    ref: master
 concurrency:
   group: ci-write-docs
   cancel-in-progress: true
@@ -29,18 +30,16 @@ jobs:
       run: |
         git worktree add doc docs
         rm -dr doc/**/*
+    - name: Check Vendor Cache
+      run: |
+        mkdir -p ./vendor/bundle
+        [[ ! -f ./vendor/bundle/.write-cached ]]
+        echo "IGNORE_DOC_OVERRIDE=$?" >> $GITHUB_ENV
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
         ruby-version: 2.7
-    - name: Check Vendor Cache
-      run: |
-        [[ ! -f vendor/bundle/.write-cached ]]
-        echo "IGNORE_DOC_OVERRIDE=$?" >> $GITHUB_ENV
-    - name: Install Gems
-      run: |
-        bundle install
     - name: YARD Gem Stats
       run: |
         bundle exec ruby run-yard stats --list-undoc
