@@ -81,7 +81,7 @@
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="HitObjects/BananaRain.html" title="OsuRuby::Beatmap::HitObjects::BananaRain (class)">BananaRain</a></span>, <span class='object_link'><a href="HitObjects/Base.html" title="OsuRuby::Beatmap::HitObjects::Base (class)">Base</a></span>, <span class='object_link'><a href="HitObjects/BaseHitsoundModifier.html" title="OsuRuby::Beatmap::HitObjects::BaseHitsoundModifier (class)">BaseHitsoundModifier</a></span>, <span class='object_link'><a href="HitObjects/Circle.html" title="OsuRuby::Beatmap::HitObjects::Circle (class)">Circle</a></span>, <span class='object_link'><a href="HitObjects/Denden.html" title="OsuRuby::Beatmap::HitObjects::Denden (class)">Denden</a></span>, <span class='object_link'><a href="HitObjects/Drumroll.html" title="OsuRuby::Beatmap::HitObjects::Drumroll (class)">Drumroll</a></span>, <span class='object_link'><a href="HitObjects/Hold.html" title="OsuRuby::Beatmap::HitObjects::Hold (class)">Hold</a></span>, <span class='object_link'><a href="HitObjects/Slider.html" title="OsuRuby::Beatmap::HitObjects::Slider (class)">Slider</a></span>, <span class='object_link'><a href="HitObjects/SliderHitsoundModifier.html" title="OsuRuby::Beatmap::HitObjects::SliderHitsoundModifier (class)">SliderHitsoundModifier</a></span>, <span class='object_link'><a href="HitObjects/Spinner.html" title="OsuRuby::Beatmap::HitObjects::Spinner (class)">Spinner</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="HitObjects/BananaRain.html" title="OsuRuby::Beatmap::HitObjects::BananaRain (class)">BananaRain</a></span>, <span class='object_link'><a href="HitObjects/Base.html" title="OsuRuby::Beatmap::HitObjects::Base (class)">Base</a></span>, <span class='object_link'><a href="HitObjects/BaseCircle.html" title="OsuRuby::Beatmap::HitObjects::BaseCircle (class)">BaseCircle</a></span>, <span class='object_link'><a href="HitObjects/BaseHitsoundModifier.html" title="OsuRuby::Beatmap::HitObjects::BaseHitsoundModifier (class)">BaseHitsoundModifier</a></span>, <span class='object_link'><a href="HitObjects/BaseSlider.html" title="OsuRuby::Beatmap::HitObjects::BaseSlider (class)">BaseSlider</a></span>, <span class='object_link'><a href="HitObjects/BaseSpinner.html" title="OsuRuby::Beatmap::HitObjects::BaseSpinner (class)">BaseSpinner</a></span>, <span class='object_link'><a href="HitObjects/Circle.html" title="OsuRuby::Beatmap::HitObjects::Circle (class)">Circle</a></span>, <span class='object_link'><a href="HitObjects/Denden.html" title="OsuRuby::Beatmap::HitObjects::Denden (class)">Denden</a></span>, <span class='object_link'><a href="HitObjects/Drumroll.html" title="OsuRuby::Beatmap::HitObjects::Drumroll (class)">Drumroll</a></span>, <span class='object_link'><a href="HitObjects/Hold.html" title="OsuRuby::Beatmap::HitObjects::Hold (class)">Hold</a></span>, <span class='object_link'><a href="HitObjects/Slider.html" title="OsuRuby::Beatmap::HitObjects::Slider (class)">Slider</a></span>, <span class='object_link'><a href="HitObjects/SliderHitsoundModifier.html" title="OsuRuby::Beatmap::HitObjects::SliderHitsoundModifier (class)">SliderHitsoundModifier</a></span>, <span class='object_link'><a href="HitObjects/Spinner.html" title="OsuRuby::Beatmap::HitObjects::Spinner (class)">Spinner</a></span>
     
   
 </p>
@@ -95,7 +95,18 @@
     <dl class="constants">
       
         <dt id="VALID_NOTETYPE-constant" class="">VALID_NOTETYPE =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Valid type flags</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='int'>1</span> <span class='op'>|</span> <span class='int'>2</span> <span class='op'>|</span> <span class='int'>8</span> <span class='op'>|</span> <span class='int'>128</span></pre></dd>
       
@@ -119,7 +130,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#determine-class_method" title="determine (class method)">.<strong>determine</strong>(beatmap, str)  &#x21d2; Object </a>
+      <a href="#determine-class_method" title="determine (class method)">.<strong>determine</strong>(beatmap, str)  &#x21d2; Base </a>
     
 
     
@@ -133,7 +144,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Anything that valid as the subcvlass says…</p>
+</div></span>
   
 </li>
 
@@ -150,13 +163,42 @@
       <div class="method_details first">
   <h3 class="signature first" id="determine-class_method">
   
-    .<strong>determine</strong>(beatmap, str)  &#x21d2; <tt>Object</tt> 
+    .<strong>determine</strong>(beatmap, str)  &#x21d2; <tt><span class='object_link'><a href="HitObjects/Base.html" title="OsuRuby::Beatmap::HitObjects::Base (class)">Base</a></span></tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns anything that valid as the subcvlass says…</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="HitObjects/Base.html" title="OsuRuby::Beatmap::HitObjects::Base (class)">Base</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>anything that valid as the subcvlass says…</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
   </div>
@@ -164,7 +206,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:28 2022 by
+  Generated on Sat Jun 25 03:34:08 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

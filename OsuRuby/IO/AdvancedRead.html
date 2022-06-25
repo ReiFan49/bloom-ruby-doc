@@ -410,7 +410,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Depends on first byte.</p>
+<p>read next object to reutrn.</p>
 </div></span>
   
 </li>
@@ -556,6 +556,28 @@
     <span class="summary_desc"><div class='inline'>
 <p>Single-Precision Float.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#read_string-instance_method" title="#read_string (instance method)">#<strong>read_string</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -907,6 +929,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>not supported.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -1090,7 +1117,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns depends on first byte.</p>
+<p>read next object to reutrn</p>
 
 
   </div>
@@ -1103,13 +1130,167 @@
     <li>
       
       
-        <span class='type'>(<tt>Boolean</tt>, <tt>Integer</tt>, <tt>String</tt>, <tt>Float</tt>, <tt><span class='object_link'><a href="../Database/Datatype/Decimal.html" title="OsuRuby::Database::Datatype::Decimal (class)">Database::Datatype::Decimal</a></span></tt>, <tt>Time</tt>, <tt>Array&lt;Integer&gt;</tt>, <tt>Object</tt>)</span>
+        <span class='type'>(<tt>Boolean</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>depends on first byte</p>
+<p>(1) boolean</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(2) (3) (4) (5) unsigned value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(6) (7) (8) (9) signed value</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(10) single char</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(11) osu! dotnet string</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(12) Single-Float</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(13) Double-Float</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Database/Datatype/Decimal.html" title="OsuRuby::Database::Datatype::Decimal (class)">Database::Datatype::Decimal</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(14) dotnet decimal</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Time</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(15) parsed dotnet time</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(16) array of bytes</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>(17) array of chars</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>unsupported.</p>
 </div>
       
     </li>
@@ -1366,6 +1547,18 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="read_string-instance_method">
+  
+    #<strong>read_string</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="read_uleb128-instance_method">
   
     #<strong>read_uleb128</strong>  &#x21d2; <tt>Integer</tt> 
@@ -1411,7 +1604,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:28 2022 by
+  Generated on Sat Jun 25 03:34:08 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

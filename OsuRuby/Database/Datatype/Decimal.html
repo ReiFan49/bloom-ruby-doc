@@ -224,7 +224,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#read_bytes-class_method" title="read_bytes (class method)">.<strong>read_bytes</strong>(string)  &#x21d2; Object </a>
+      <a href="#read_bytes-class_method" title="read_bytes (class method)">.<strong>read_bytes</strong>(string)  &#x21d2; Decimal </a>
     
 
     
@@ -238,7 +238,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>reads back the byte format that is created through #to_bytes.</p>
+</div></span>
   
 </li>
 
@@ -246,7 +248,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#try_convert-class_method" title="try_convert (class method)">.<strong>try_convert</strong>(value)  &#x21d2; Object </a>
+      <a href="#try_convert-class_method" title="try_convert (class method)">.<strong>try_convert</strong>(value)  &#x21d2; Decimal </a>
     
 
     
@@ -277,7 +279,55 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#split-instance_method" title="#split (instance method)">#<strong>split</strong>  &#x21d2; Object </a>
+      <a href="#split-instance_method" title="#split (instance method)">#<strong>split</strong>  &#x21d2; (Integer, Integer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>splits integral and decimal part.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_bytes-instance_method" title="#to_bytes (instance method)">#<strong>to_bytes</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Converts the struct into 16-bytes of string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_d-instance_method" title="#to_d (instance method)">#<strong>to_d</strong>  &#x21d2; BigDecimal </a>
     
 
     
@@ -299,7 +349,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_bytes-instance_method" title="#to_bytes (instance method)">#<strong>to_bytes</strong>  &#x21d2; Object </a>
+      <a href="#to_f-instance_method" title="#to_f (instance method)">#<strong>to_f</strong>  &#x21d2; Float </a>
     
 
     
@@ -321,7 +371,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_d-instance_method" title="#to_d (instance method)">#<strong>to_d</strong>  &#x21d2; Object </a>
+      <a href="#to_i-instance_method" title="#to_i (instance method)">#<strong>to_i</strong>  &#x21d2; Integer </a>
     
 
     
@@ -343,7 +393,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_f-instance_method" title="#to_f (instance method)">#<strong>to_f</strong>  &#x21d2; Object </a>
+      <a href="#to_int-instance_method" title="#to_int (instance method)">#<strong>to_int</strong>  &#x21d2; Integer </a>
     
 
     
@@ -365,7 +415,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_i-instance_method" title="#to_i (instance method)">#<strong>to_i</strong>  &#x21d2; Object </a>
+      <a href="#to_r-instance_method" title="#to_r (instance method)">#<strong>to_r</strong>  &#x21d2; Rational </a>
     
 
     
@@ -387,51 +437,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_int-instance_method" title="#to_int (instance method)">#<strong>to_int</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_r-instance_method" title="#to_r (instance method)">#<strong>to_r</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; Object </a>
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; String </a>
     
 
     
@@ -640,25 +646,220 @@
       <div class="method_details first">
   <h3 class="signature first" id="read_bytes-class_method">
   
-    .<strong>read_bytes</strong>(string)  &#x21d2; <tt>Object</tt> 
+    .<strong>read_bytes</strong>(string)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>reads back the byte format that is created through #to_bytes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>16-bytes of string</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="try_convert-class_method">
   
-    .<strong>try_convert</strong>(value)  &#x21d2; <tt>Object</tt> 
+    
+      <span class="overload">.<strong>try_convert</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt> </span>
+    
+      <span class="overload">.<strong>try_convert</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt> </span>
+    
+      <span class="overload">.<strong>try_convert</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt> </span>
+    
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>try_convert</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>string that need to be split upon.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>try_convert</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>, <tt>Rational</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>convert to string of float-form</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">.<strong>try_convert</strong>(value)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="OsuRuby::Database::Datatype::Decimal (class)">Decimal</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>failed convert attempt</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
   </div>
@@ -670,97 +871,282 @@
       <div class="method_details first">
   <h3 class="signature first" id="split-instance_method">
   
-    #<strong>split</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>split</strong>  &#x21d2; <tt>(Integer, Integer)</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>splits integral and decimal part</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>(Integer, Integer)</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>pair of integer</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_bytes-instance_method">
   
-    #<strong>to_bytes</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_bytes</strong>  &#x21d2; <tt>String</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Converts the struct into 16-bytes of string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_d-instance_method">
   
-    #<strong>to_d</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_d</strong>  &#x21d2; <tt>BigDecimal</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>BigDecimal</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_f-instance_method">
   
-    #<strong>to_f</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_f</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_i-instance_method">
   
-    #<strong>to_i</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_i</strong>  &#x21d2; <tt>Integer</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_int-instance_method">
   
-    #<strong>to_int</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_int</strong>  &#x21d2; <tt>Integer</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_r-instance_method">
   
-    #<strong>to_r</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_r</strong>  &#x21d2; <tt>Rational</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Rational</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_s-instance_method">
   
-    #<strong>to_s</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_s</strong>  &#x21d2; <tt>String</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
   </div>
@@ -768,7 +1154,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:29 2022 by
+  Generated on Sat Jun 25 03:34:09 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

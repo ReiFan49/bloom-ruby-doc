@@ -93,7 +93,18 @@
 
   
 </div>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Three-pair tuple that is used for most of osu! difficulty related scaling.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -197,7 +208,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#approach-instance_method" title="#approach (instance method)">#<strong>approach</strong>(value)  &#x21d2; Object </a>
+      <a href="#approach-instance_method" title="#approach (instance method)">#<strong>approach</strong>(value)  &#x21d2; Numeric </a>
     
 
     
@@ -211,7 +222,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>retrieve the <code>original_value</code> on given <code>difficulty_value</code>.</p>
+</div></span>
   
 </li>
 
@@ -241,7 +254,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#obtain-instance_method" title="#obtain (instance method)">#<strong>obtain</strong>(value)  &#x21d2; Object </a>
+      <a href="#obtain-instance_method" title="#obtain (instance method)">#<strong>obtain</strong>(value)  &#x21d2; Numeric </a>
     
 
     
@@ -255,7 +268,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>retrieve the <code>difficulty_value</code> on given <code>value</code> (expected from 0 to 10, may go beyond limits).</p>
+</div></span>
   
 </li>
 
@@ -407,13 +422,69 @@
       <div class="method_details first">
   <h3 class="signature first" id="approach-instance_method">
   
-    #<strong>approach</strong>(value)  &#x21d2; <tt>Object</tt> 
+    #<strong>approach</strong>(value)  &#x21d2; <tt>Numeric</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>retrieve the <code>original_value</code> on given <code>difficulty_value</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>reference value to compare with OsuRuby::Beatmap::DifficultyProgress.{{#low}, OsuRuby::Beatmap::DifficultyProgress.{{#mid}, and OsuRuby::Beatmap::DifficultyProgress.{{#high}.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>projected <code>priginal_value</code> from given <code>difficulty_value</code></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#obtain-instance_method" title="OsuRuby::Beatmap::DifficultyProgress#obtain (method)">to compare returned +original_value+ with.</a></span></li>
+    
+  </ul>
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -431,13 +502,69 @@
       <div class="method_details ">
   <h3 class="signature " id="obtain-instance_method">
   
-    #<strong>obtain</strong>(value)  &#x21d2; <tt>Object</tt> 
+    #<strong>obtain</strong>(value)  &#x21d2; <tt>Numeric</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>retrieve the <code>difficulty_value</code> on given <code>value</code> (expected from 0 to 10, may go beyond limits)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>reference value to compare.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>projected <code>difficulty_value</code>.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#approach-instance_method" title="OsuRuby::Beatmap::DifficultyProgress#approach (method)">to compare returned +difficulty_value+ with.</a></span></li>
+    
+  </ul>
+
+</div>
 </div>
     
   </div>
@@ -445,7 +572,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:28 2022 by
+  Generated on Sat Jun 25 03:34:08 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

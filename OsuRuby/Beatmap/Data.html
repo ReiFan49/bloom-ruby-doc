@@ -101,7 +101,18 @@
 
   
 </div>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Represents Beatmap data in general.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
   
     <h2>
       Constant Summary
@@ -111,12 +122,34 @@
     <dl class="constants">
       
         <dt id="SPECIAL_SECTIONS-constant" class="">SPECIAL_SECTIONS =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>TODO: define special section for parsing etc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='qsymbols_beg'>%i(</span><span class='tstring_content'>TimingPoints</span><span class='words_sep'> </span><span class='tstring_content'>HitObjects</span><span class='tstring_end'>)</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
       
         <dt id="SPINNER_DIFFICULTY-constant" class="">SPINNER_DIFFICULTY =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>defines global spinner difficulty used through all main modes.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='const'><span class='object_link'><a href="DifficultyProgress.html" title="OsuRuby::Beatmap::DifficultyProgress (class)">DifficultyProgress</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='float'>3.0</span><span class='comma'>,</span><span class='float'>5.0</span><span class='comma'>,</span><span class='float'>7.5</span><span class='rparen'>)</span></pre></dd>
       
@@ -171,7 +204,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#bpm_at-instance_method" title="#bpm_at (instance method)">#<strong>bpm_at</strong>(time)  &#x21d2; Object </a>
+      <a href="#bpm_at-instance_method" title="#bpm_at (instance method)">#<strong>bpm_at</strong>(time)  &#x21d2; Float </a>
     
 
     
@@ -185,7 +218,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Current BPM at given time position.</p>
+</div></span>
   
 </li>
 
@@ -193,7 +228,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>(mode = :nil)  &#x21d2; Object </a>
+      <a href="#clear-instance_method" title="#clear (instance method)">#<strong>clear</strong>(mode = :nil)  </a>
     
 
     
@@ -207,7 +242,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>reset beatmap cache and process the extensions defined.</p>
+</div></span>
   
 </li>
 
@@ -215,7 +252,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#clear_caches-instance_method" title="#clear_caches (instance method)">#<strong>clear_caches</strong>  &#x21d2; Object </a>
+      <a href="#clear_caches-instance_method" title="#clear_caches (instance method)">#<strong>clear_caches</strong>  </a>
     
 
     
@@ -229,7 +266,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Clear existing caches stored in a beatmap.</p>
+</div></span>
   
 </li>
 
@@ -277,7 +316,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>copies all soft references of the original beatmap to current beatmap.</p>
+</div></span>
   
 </li>
 
@@ -299,7 +340,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether the beatmap have <tt>2 x 2^n</tt> tick rate.</p>
+</div></span>
   
 </li>
 
@@ -307,7 +350,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#spinner_difficulty-instance_method" title="#spinner_difficulty (instance method)">#<strong>spinner_difficulty</strong>  &#x21d2; Object </a>
+      <a href="#spinner_difficulty-instance_method" title="#spinner_difficulty (instance method)">#<strong>spinner_difficulty</strong>  &#x21d2; Float </a>
     
 
     
@@ -321,7 +364,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Obtain current beatmap spinner difficulty.</p>
+</div></span>
   
 </li>
 
@@ -343,7 +388,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether does not satisfy the usual tick rate divisor.</p>
+</div></span>
   
 </li>
 
@@ -351,7 +398,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sv_at-instance_method" title="#sv_at (instance method)">#<strong>sv_at</strong>(time)  &#x21d2; Object </a>
+      <a href="#sv_at-instance_method" title="#sv_at (instance method)">#<strong>sv_at</strong>(time)  &#x21d2; Float </a>
     
 
     
@@ -365,7 +412,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Current Slider Velocity at given time position.</p>
+</div></span>
   
 </li>
 
@@ -373,7 +422,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#timing_at-instance_method" title="#timing_at (instance method)">#<strong>timing_at</strong>(time)  &#x21d2; Object </a>
+      <a href="#timing_at-instance_method" title="#timing_at (instance method)">#<strong>timing_at</strong>(time)  &#x21d2; TimingPoints::Compound </a>
     
 
     
@@ -387,7 +436,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>obtain timing point property at given <code>time</code>.</p>
+</div></span>
   
 </li>
 
@@ -409,7 +460,33 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether the beatmap have <tt>3 x 2^n</tt> tick rate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unusual_tick_rate%3F-instance_method" title="#unusual_tick_rate? (instance method)">#<strong>unusual_tick_rate?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether does not use the standard supported tick rate.</p>
+</div></span>
   
 </li>
 
@@ -473,37 +550,142 @@
       <div class="method_details first">
   <h3 class="signature first" id="bpm_at-instance_method">
   
-    #<strong>bpm_at</strong>(time)  &#x21d2; <tt>Object</tt> 
+    #<strong>bpm_at</strong>(time)  &#x21d2; <tt>Float</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns current BPM at given time position.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>time</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>position to check</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>current BPM at given time position</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#timing_at-instance_method" title="OsuRuby::Beatmap::Data#timing_at (method)">obtain current timing data.</a></span></li>
+    
+      <li><span class='object_link'><a href="#sv_at-instance_method" title="OsuRuby::Beatmap::Data#sv_at (method)">obtain current relative speed</a></span></li>
+    
+  </ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="clear-instance_method">
   
-    #<strong>clear</strong>(mode = :nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>clear</strong>(mode = :nil)  
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>reset beatmap cache and process the extensions defined</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mode</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>TBD</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="clear_caches-instance_method">
   
-    #<strong>clear_caches</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>clear_caches</strong>  
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Clear existing caches stored in a beatmap. Currently it supports following operations:</p>
+<ul><li>
+<p>Clears cached timing from current beatmap.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -515,7 +697,18 @@
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>copies all soft references of the original beatmap to current beatmap. pretty useful for handling converts or mods.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -530,6 +723,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns checks whether the beatmap have <tt>2 x 2^n</tt> tick rate.</p>
+
 
   </div>
 </div>
@@ -545,6 +740,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>checks whether the beatmap have <tt>2 x 2^n</tt> tick rate.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -555,13 +755,42 @@
       <div class="method_details ">
   <h3 class="signature " id="spinner_difficulty-instance_method">
   
-    #<strong>spinner_difficulty</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>spinner_difficulty</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns obtain current beatmap spinner difficulty.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>obtain current beatmap spinner difficulty.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -576,6 +805,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns checks whether does not satisfy the usual tick rate divisor.</p>
+
 
   </div>
 </div>
@@ -591,9 +822,21 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>checks whether does not satisfy the usual tick rate divisor.</p>
+</div>
+      
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#unusual_tick_rate%3F-instance_method" title="OsuRuby::Beatmap::Data#unusual_tick_rate? (method)">#unusual_tick_rate?</a></span></li>
+    
+  </ul>
 
 </div>
 </div>
@@ -601,25 +844,152 @@
       <div class="method_details ">
   <h3 class="signature " id="sv_at-instance_method">
   
-    #<strong>sv_at</strong>(time)  &#x21d2; <tt>Object</tt> 
+    #<strong>sv_at</strong>(time)  &#x21d2; <tt>Float</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns current Slider Velocity at given time position.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>time</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>position to check</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>current Slider Velocity at given time position</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#timing_at-instance_method" title="OsuRuby::Beatmap::Data#timing_at (method)">obtain current timing data.</a></span></li>
+    
+      <li><span class='object_link'><a href="#bpm_at-instance_method" title="OsuRuby::Beatmap::Data#bpm_at (method)">obtain current BPM</a></span></li>
+    
+  </ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="timing_at-instance_method">
   
-    #<strong>timing_at</strong>(time)  &#x21d2; <tt>Object</tt> 
+    #<strong>timing_at</strong>(time)  &#x21d2; <tt><span class='object_link'><a href="TimingPoints/Compound.html" title="OsuRuby::Beatmap::TimingPoints::Compound (class)">TimingPoints::Compound</a></span></tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note todo">
+    <strong>TODO:</strong>
+    <div class='inline'>
+<p>Different behavior checks will be implemented later.</p>
+</div>
+  </div>
+
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This behavior changed in <code>b20210823.cuttingedge</code> build.</p>
+</div>
+  </div>
+
+
+<p>obtain timing point property at given <code>time</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>time</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>, <tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>time position to check with.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TimingPoints/Compound.html" title="OsuRuby::Beatmap::TimingPoints::Compound (class)">TimingPoints::Compound</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#bpm_at-instance_method" title="OsuRuby::Beatmap::Data#bpm_at (method)">obtain current BPM</a></span></li>
+    
+      <li><span class='object_link'><a href="#sv_at-instance_method" title="OsuRuby::Beatmap::Data#sv_at (method)">obtain current relative speed</a></span></li>
+    
+  </ul>
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -634,6 +1004,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns checks whether the beatmap have <tt>3 x 2^n</tt> tick rate.</p>
+
 
   </div>
 </div>
@@ -649,9 +1021,62 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>checks whether the beatmap have <tt>3 x 2^n</tt> tick rate.</p>
+</div>
+      
     </li>
   
 </ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unusual_tick_rate?-instance_method">
+  
+    #<strong>unusual_tick_rate?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns checks whether does not use the standard supported tick rate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>checks whether does not use the standard supported tick rate.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#strange_tick_rate%3F-instance_method" title="OsuRuby::Beatmap::Data#strange_tick_rate? (method)">#strange_tick_rate?</a></span></li>
+    
+  </ul>
 
 </div>
 </div>
@@ -661,7 +1086,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:28 2022 by
+  Generated on Sat Jun 25 03:34:09 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

@@ -93,7 +93,20 @@
 
   
 </div>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This is a summarized timing class. Contains both reference to both current active uninherited/absolute and inherited/relative class. All the methods from KEY_METHODS constant are delegated carefully.</p>
 
+<p>If the inherited/relative timing existed, it&#39;ll take priority over the uninherited/absolute one.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -170,7 +183,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#bpm-instance_method" title="#bpm (instance method)">#<strong>bpm</strong>  &#x21d2; Object </a>
+      <a href="#bpm-instance_method" title="#bpm (instance method)">#<strong>bpm</strong>  &#x21d2; Float </a>
     
 
     
@@ -184,7 +197,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Current BPM of the timing.</p>
+</div></span>
   
 </li>
 
@@ -192,7 +207,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#speed-instance_method" title="#speed (instance method)">#<strong>speed</strong>  &#x21d2; Object </a>
+      <a href="#speed-instance_method" title="#speed (instance method)">#<strong>speed</strong>  &#x21d2; Float </a>
     
 
     
@@ -206,7 +221,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Current speed of the timing, defaults to 1.0 if none.</p>
+</div></span>
   
 </li>
 
@@ -315,25 +332,83 @@
       <div class="method_details first">
   <h3 class="signature first" id="bpm-instance_method">
   
-    #<strong>bpm</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>bpm</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns current BPM of the timing.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>current BPM of the timing</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="speed-instance_method">
   
-    #<strong>speed</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>speed</strong>  &#x21d2; <tt>Float</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns current speed of the timing, defaults to 1.0 if none.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>current speed of the timing, defaults to 1.0 if none.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
   </div>
@@ -341,7 +416,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:29 2022 by
+  Generated on Sat Jun 25 03:34:09 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc
