@@ -320,10 +320,10 @@
 </div>
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span>
-  <span class='label'>osu:</span>    <span class='int'>20150211</span><span class='comma'>,</span>
-	<span class='label'>taiko:</span>  <span class='int'>20140610</span><span class='comma'>,</span>
-	<span class='label'>fruits:</span> <span class='int'>20141123</span><span class='comma'>,</span>
-	<span class='label'>mania:</span>  <span class='int'>20150110</span>
+  <span class='label'>osu:</span>    <span class='lbracket'>[</span><span class='int'>20150211</span><span class='comma'>,</span> <span class='int'>20160722</span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='label'>taiko:</span>  <span class='int'>20140610</span><span class='comma'>,</span>
+  <span class='label'>fruits:</span> <span class='int'>20141123</span><span class='comma'>,</span>
+  <span class='label'>mania:</span>  <span class='int'>20150110</span><span class='comma'>,</span>
 <span class='rbrace'>}</span></pre></dd>
       
         <dt id="VERSION_BEATMAP_SIZE-constant" class="">VERSION_BEATMAP_SIZE =
@@ -340,7 +340,7 @@
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='int'>20150817</span><span class='op'>..</span><span class='int'>20191106</span></pre></dd>
+        <dd><pre class="code"><span class='int'>20160408</span><span class='op'>..</span><span class='int'>20191106</span></pre></dd>
       
         <dt id="VERSION_FLAG_CACHE-constant" class="">VERSION_FLAG_CACHE =
           <div class="docstring">
@@ -370,7 +370,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#map_list-instance_method" title="#map_list (instance method)">#<strong>map_list</strong>  &#x21d2; Object </a>
+      <a href="#contents-instance_method" title="#contents (instance method)">#<strong>contents</strong>  &#x21d2; Object </a>
     
 
     
@@ -390,7 +390,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute map_list.</p>
+<p>Returns the value of attribute contents.</p>
 </div></span>
   
 </li>
@@ -416,7 +416,7 @@
   <h2>Method Summary</h2>
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="BaseDB.html" title="OsuRuby::Database::BaseDB (class)">BaseDB</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="BaseDB.html#initialize-instance_method" title="OsuRuby::Database::BaseDB#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="BaseDB.html#inspect-instance_method" title="OsuRuby::Database::BaseDB#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="BaseDB.html#load-class_method" title="OsuRuby::Database::BaseDB.load (method)">load</a></span>, <span class='object_link'><a href="BaseDB.html#read_file-instance_method" title="OsuRuby::Database::BaseDB#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="BaseDB.html#version!-instance_method" title="OsuRuby::Database::BaseDB#version! (method)">#version!</a></span>, <span class='object_link'><a href="BaseDB.html#write_to_file-instance_method" title="OsuRuby::Database::BaseDB#write_to_file (method)">#write_to_file</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="BaseDB.html#initialize-instance_method" title="OsuRuby::Database::BaseDB#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="BaseDB.html#initialize_copy-instance_method" title="OsuRuby::Database::BaseDB#initialize_copy (method)">#initialize_copy</a></span>, <span class='object_link'><a href="BaseDB.html#inspect-instance_method" title="OsuRuby::Database::BaseDB#inspect (method)">#inspect</a></span>, <span class='object_link'><a href="BaseDB.html#load-class_method" title="OsuRuby::Database::BaseDB.load (method)">load</a></span>, <span class='object_link'><a href="BaseDB.html#read_file-instance_method" title="OsuRuby::Database::BaseDB#read_file (method)">#read_file</a></span>, <span class='object_link'><a href="BaseDB.html#read_structs-instance_method" title="OsuRuby::Database::BaseDB#read_structs (method)">#read_structs</a></span>, <span class='object_link'><a href="BaseDB.html#version!-instance_method" title="OsuRuby::Database::BaseDB#version! (method)">#version!</a></span>, <span class='object_link'><a href="BaseDB.html#write_structs-instance_method" title="OsuRuby::Database::BaseDB#write_structs (method)">#write_structs</a></span>, <span class='object_link'><a href="BaseDB.html#write_to_file-instance_method" title="OsuRuby::Database::BaseDB#write_to_file (method)">#write_to_file</a></span></p>
 
   
   
@@ -442,9 +442,9 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="map_list-instance_method">
+  <h3 class="signature first" id="contents-instance_method">
   
-    #<strong>map_list</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+    #<strong>contents</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
@@ -453,7 +453,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute map_list.</p>
+<p>Returns the value of attribute contents.</p>
 
 
   </div>
@@ -470,7 +470,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:29 2022 by
+  Generated on Sat Jun 25 03:34:09 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

@@ -60,7 +60,7 @@
       </div>
 
       <div id="content"><h1>Class: OsuRuby::Beatmap::HitObjects::Base
-  
+  <span class="abstract note title">Abstract</span>
   
   
 </h1>
@@ -96,9 +96,26 @@
 
   
 </div>
-<div id="subclasses">
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This class is abstract.</strong>
+  <div class='inline'>
+<p>A base class for hitobject-related queries</p>
+</div>
+</div>
+
+<p>Note that this implement a very core of the object itself. If you want to do a note specific, please see the implementation of subclasses</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Circle.html" title="OsuRuby::Beatmap::HitObjects::Circle (class)">Circle</a></span>, <span class='object_link'><a href="Hold.html" title="OsuRuby::Beatmap::HitObjects::Hold (class)">Hold</a></span>, <span class='object_link'><a href="Slider.html" title="OsuRuby::Beatmap::HitObjects::Slider (class)">Slider</a></span>, <span class='object_link'><a href="Spinner.html" title="OsuRuby::Beatmap::HitObjects::Spinner (class)">Spinner</a></span></p>
+  <p class="children"><span class='object_link'><a href="BaseCircle.html" title="OsuRuby::Beatmap::HitObjects::BaseCircle (class)">BaseCircle</a></span>, <span class='object_link'><a href="BaseSlider.html" title="OsuRuby::Beatmap::HitObjects::BaseSlider (class)">BaseSlider</a></span>, <span class='object_link'><a href="BaseSpinner.html" title="OsuRuby::Beatmap::HitObjects::BaseSpinner (class)">BaseSpinner</a></span>, <span class='object_link'><a href="Hold.html" title="OsuRuby::Beatmap::HitObjects::Hold (class)">Hold</a></span></p>
 </div>
 
 
@@ -268,7 +285,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#parse-class_method" title="parse (class method)">.<strong>parse</strong>(beatmap, str)  &#x21d2; Object </a>
+      <a href="#parse-class_method" title="parse (class method)">.<strong>parse</strong>(beatmap, str)  &#x21d2; HitObjects::Base </a>
     
 
     
@@ -282,7 +299,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>parses the given string into a HitObject Base.</p>
+</div></span>
   
 </li>
 
@@ -299,7 +318,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#as_osu-instance_method" title="#as_osu (instance method)">#<strong>as_osu</strong>  &#x21d2; Object </a>
+      <a href="#as_osu-instance_method" title="#as_osu (instance method)">#<strong>as_osu</strong>  &#x21d2; Array </a>
     
 
     
@@ -313,7 +332,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>A modifiable pre-HitObject compliant format data.</p>
+</div></span>
   
 </li>
 
@@ -321,7 +342,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#end_time-instance_method" title="#end_time (instance method)">#<strong>end_time</strong>  &#x21d2; Object </a>
+      <a href="#end_time-instance_method" title="#end_time (instance method)">#<strong>end_time</strong>  &#x21d2; Integer </a>
     
 
     
@@ -335,7 +356,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Hitobject endpoint.</p>
+</div></span>
   
 </li>
 
@@ -343,7 +366,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#extra_data-instance_method" title="#extra_data (instance method)">#<strong>extra_data</strong>  &#x21d2; Object </a>
+      <a href="#extra_data-instance_method" title="#extra_data (instance method)">#<strong>extra_data</strong>  &#x21d2; Object<sup>?</sup> </a>
     
 
     
@@ -357,7 +380,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Extra data.</p>
+</div></span>
   
 </li>
 
@@ -379,7 +404,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Have hitnormal.</p>
+</div></span>
   
 </li>
 
@@ -401,7 +428,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Have hitclap.</p>
+</div></span>
   
 </li>
 
@@ -423,7 +452,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Have hitfinish.</p>
+</div></span>
   
 </li>
 
@@ -445,7 +476,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Have hitsound.</p>
+</div></span>
   
 </li>
 
@@ -467,7 +500,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Have hitwhistle.</p>
+</div></span>
   
 </li>
 
@@ -501,7 +536,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#is_combo_hax-instance_method" title="#is_combo_hax (instance method)">#<strong>is_combo_hax</strong>  &#x21d2; Object </a>
+      <a href="#is_combo_hax-instance_method" title="#is_combo_hax (instance method)">#<strong>is_combo_hax</strong>  &#x21d2; Boolean </a>
     
 
     
@@ -515,7 +550,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Combo hax offset check.</p>
+</div></span>
   
 </li>
 
@@ -537,7 +574,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>New combo marker.</p>
+</div></span>
   
 </li>
 
@@ -545,7 +584,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#length-instance_method" title="#length (instance method)">#<strong>length</strong>  &#x21d2; Object </a>
+      <a href="#length-instance_method" title="#length (instance method)">#<strong>length</strong>  &#x21d2; Integer </a>
     
 
     
@@ -559,7 +598,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Hitobject duration.</p>
+</div></span>
   
 </li>
 
@@ -581,7 +622,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>No hitsound.</p>
+</div></span>
   
 </li>
 
@@ -589,7 +632,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#note_type-instance_method" title="#note_type (instance method)">#<strong>note_type</strong>  &#x21d2; Object </a>
+      <a href="#note_type-instance_method" title="#note_type (instance method)">#<strong>note_type</strong>  &#x21d2; Integer </a>
     
 
     
@@ -603,7 +646,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Hitobject raw type.</p>
+</div></span>
   
 </li>
 
@@ -611,7 +656,31 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#process_extras-instance_method" title="#process_extras (instance method)">#<strong>process_extras</strong>(*extras)  &#x21d2; Object </a>
+      <a href="#process_extras-instance_method" title="#process_extras (instance method)">#<strong>process_extras</strong>(*extras)  </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  <span class="abstract note title">abstract</span>
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Including the badly formatted extras from v10.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#timing_data-instance_method" title="#timing_data (instance method)">#<strong>timing_data</strong>  &#x21d2; TimingPoints::Compound </a>
     
 
     
@@ -625,7 +694,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Current state of timing point on given object time.</p>
+</div></span>
   
 </li>
 
@@ -633,7 +704,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#timing_data-instance_method" title="#timing_data (instance method)">#<strong>timing_data</strong>  &#x21d2; Object </a>
+      <a href="#to_osu-instance_method" title="#to_osu (instance method)">#<strong>to_osu</strong>  &#x21d2; String </a>
     
 
     
@@ -647,29 +718,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_osu-instance_method" title="#to_osu (instance method)">#<strong>to_osu</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>A HitObject format compliant.</p>
+</div></span>
   
 </li>
 
@@ -856,13 +907,73 @@
       <div class="method_details first">
   <h3 class="signature first" id="parse-class_method">
   
-    .<strong>parse</strong>(beatmap, str)  &#x21d2; <tt>Object</tt> 
+    .<strong>parse</strong>(beatmap, str)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Beatmap::HitObjects::Base (class)">HitObjects::Base</a></span></tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>parses the given string into a HitObject Base.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>beatmap</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Data.html" title="OsuRuby::Beatmap::Data (class)">Beatmap::Data</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a beatmap to stick on with.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>hitobject string to parse on</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="OsuRuby::Beatmap::HitObjects::Base (class)">HitObjects::Base</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
   </div>
@@ -874,37 +985,147 @@
       <div class="method_details first">
   <h3 class="signature first" id="as_osu-instance_method">
   
-    #<strong>as_osu</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>as_osu</strong>  &#x21d2; <tt>Array</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>It&#39;s suggested to use this when trying to convert hitobjects or whatever you think it is. into a comma-split entry.</p>
+</div>
+  </div>
+
+
+<p>Returns a modifiable pre-HitObject compliant format data.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a modifiable pre-HitObject compliant format data</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#to_osu-instance_method" title="OsuRuby::Beatmap::HitObjects::Base#to_osu (method)">#to_osu</a></span></li>
+    
+  </ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="end_time-instance_method">
   
-    #<strong>end_time</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>end_time</strong>  &#x21d2; <tt>Integer</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns hitobject endpoint.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>hitobject endpoint</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="extra_data-instance_method">
   
-    #<strong>extra_data</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>extra_data</strong>  &#x21d2; <tt>Object</tt><sup>?</sup> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Not really useful? Hope this is just raw data of extra parameters. but will see the later implementation after all of them are done.</p>
+</div>
+  </div>
+
+
+<p>Returns extra data.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>extra data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -919,6 +1140,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns have hitnormal.</p>
+
 
   </div>
 </div>
@@ -933,6 +1156,11 @@
         <span class='type'>(<tt>Boolean</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'>
+<p>have hitnormal</p>
+</div>
       
     </li>
   
@@ -953,6 +1181,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns have hitclap.</p>
+
 
   </div>
 </div>
@@ -967,6 +1197,11 @@
         <span class='type'>(<tt>Boolean</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'>
+<p>have hitclap</p>
+</div>
       
     </li>
   
@@ -987,6 +1222,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns have hitfinish.</p>
+
 
   </div>
 </div>
@@ -1001,6 +1238,11 @@
         <span class='type'>(<tt>Boolean</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'>
+<p>have hitfinish</p>
+</div>
       
     </li>
   
@@ -1021,6 +1263,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns have hitsound.</p>
+
 
   </div>
 </div>
@@ -1035,6 +1279,11 @@
         <span class='type'>(<tt>Boolean</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'>
+<p>have hitsound</p>
+</div>
       
     </li>
   
@@ -1055,6 +1304,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns have hitwhistle.</p>
+
 
   </div>
 </div>
@@ -1070,6 +1321,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>have hitwhistle</p>
+</div>
+      
     </li>
   
 </ul>
@@ -1080,13 +1336,42 @@
       <div class="method_details ">
   <h3 class="signature " id="is_combo_hax-instance_method">
   
-    #<strong>is_combo_hax</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>is_combo_hax</strong>  &#x21d2; <tt>Boolean</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns combo hax offset check.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>combo hax offset check</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -1101,6 +1386,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns new combo marker.</p>
+
 
   </div>
 </div>
@@ -1116,6 +1403,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>new combo marker</p>
+</div>
+      
     </li>
   
 </ul>
@@ -1126,13 +1418,42 @@
       <div class="method_details ">
   <h3 class="signature " id="length-instance_method">
   
-    #<strong>length</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>length</strong>  &#x21d2; <tt>Integer</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns hitobject duration.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>hitobject duration</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
@@ -1147,6 +1468,8 @@
 </h3><div class="docstring">
   <div class="discussion">
     
+<p>Returns no hitsound.</p>
+
 
   </div>
 </div>
@@ -1162,6 +1485,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>no hitsound</p>
+</div>
+      
     </li>
   
 </ul>
@@ -1172,49 +1500,160 @@
       <div class="method_details ">
   <h3 class="signature " id="note_type-instance_method">
   
-    #<strong>note_type</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>note_type</strong>  &#x21d2; <tt>Integer</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns hitobject raw type.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>hitobject raw type</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="process_extras-instance_method">
   
-    #<strong>process_extras</strong>(*extras)  &#x21d2; <tt>Object</tt> 
+    #<strong>process_extras</strong>(*extras)  
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This method is abstract.</strong>
+  <div class='inline'>
+<p>This function is meant to control any non-base related parsing</p>
+</div>
+</div>
+<p class="note returns_void">This method returns an undefined value.</p>
+<p>Including the badly formatted extras from v10</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="timing_data-instance_method">
   
-    #<strong>timing_data</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>timing_data</strong>  &#x21d2; <tt><span class='object_link'><a href="../TimingPoints/Compound.html" title="OsuRuby::Beatmap::TimingPoints::Compound (class)">TimingPoints::Compound</a></span></tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns current state of timing point on given object time.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../TimingPoints/Compound.html" title="OsuRuby::Beatmap::TimingPoints::Compound (class)">TimingPoints::Compound</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>current state of timing point on given object time</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
 </div>
     
       <div class="method_details ">
   <h3 class="signature " id="to_osu-instance_method">
   
-    #<strong>to_osu</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>to_osu</strong>  &#x21d2; <tt>String</tt> 
   
 
   
 
   
-</h3>
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a HitObject format compliant.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>a HitObject format compliant</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#as_osu-instance_method" title="OsuRuby::Beatmap::HitObjects::Base#as_osu (method)">#as_osu</a></span></li>
+    
+  </ul>
+
+</div>
 </div>
     
   </div>
@@ -1222,7 +1661,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jun 23 13:34:29 2022 by
+  Generated on Sat Jun 25 03:34:09 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc
