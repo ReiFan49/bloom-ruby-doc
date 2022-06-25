@@ -4,10 +4,10 @@ on:
     branches:
     - master
     paths:
-    - 'run-yard'
     - 'Gemfile'
     - 'gem-lists.yaml'
     - '.github/workflows/write-docs.yaml'
+    - 'bin/**'
     - 'yard-config/**'
   repository_dispatch:
     types:
@@ -29,28 +29,39 @@ jobs:
     - name: Access Documentation Worktree
       run: |
         git worktree add doc docs
-        rm -dr doc/**/*
-    - name: Check Vendor Cache
-      run: |
-        mkdir -p ./vendor/bundle
-        [[ ! -f ./vendor/bundle/.write-cached ]]
-        echo "IGNORE_DOC_OVERRIDE=$?" >> $GITHUB_ENV
+        if [[ -f doc/.gemcache ]]; then
+          mv doc/.gemcache .
+          rm -dr doc/**/*
+          mv .gemcache doc
+        else
+          rm -dr doc/**/*
+        fi
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true
         ruby-version: 2.7
+    - name: Check Library Cache
+      run: |
+        bundle exec ruby bin/process-gemcache
+        if [[ -f doc/.gemcache ]]; then
+          diff -iEbZwBaq .gemcache doc/.gemcache
+          echo "IGNORE_DOC_OVERRIDE=$?" >> $GITHUB_ENV
+        else
+          echo "IGNORE_DOC_OVERRIDE=1" >> $GITHUB_ENV
+        fi
     - name: YARD Gem Stats
       run: |
-        bundle exec ruby run-yard stats --list-undoc
+        bundle exec ruby bin/run-yard stats --list-undoc
     - name: YARD Gem Write
-      if: ${{ env.IGNORE_DOC_OVERRIDE == '0' }}
+      if: ${{ env.IGNORE_DOC_OVERRIDE == '1' }}
       run: |
-        bundle exec ruby run-yard doc -r yard-config/README.md \
+        bundle exec ruby bin/run-yard doc -r yard-config/README.md \
           -p yard-config/templates/reidoc \
           --hide-void-return
-        touch vendor/bundle/.write-cached
+        mv .gemcache doc/.gemcache
     - name: Commit to Docs
+      if: ${{ env.IGNORE_DOC_OVERRIDE == '1' }}
       working-directory: ./doc
       continue-on-error: true
       run: |

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'bundler'
+contents = []
+Bundler.locked_gems.specs.select do |spec| Bundler::Source::Git === spec.source end
+  .each do |spec|
+    contents << sprintf("%s %s", spec.name, spec.source.revision)
+  end
+
+File.write('.gemcache', contents.join($/))
