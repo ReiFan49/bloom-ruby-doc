@@ -1,25 +1,20 @@
 <%
   simplify_paths = ->(files){
-    p files
-    doc_path = Pathname.new(files.first)
+    doc_file = files.first
+    doc_file = File.join Dir.pwd, doc_file if doc_file[0] != '/'
+    doc_path = Pathname.new(doc_file)
     gem_name = ""
     gem_version = ""
     norm_path = ""
     
     GEM_COLLECTION_DATA.find do |spec|
-      spec.load_paths.any? do |lib_dir| files.first.start_with?(lib_dir + '/') end
+      spec.load_paths.any? do |lib_dir| doc_file.start_with?(lib_dir + '/') end
     end&.tap do |spec|
       gem_name = spec.name
       gem_version = spec.version
       spec.load_paths.each do |lib_dir|
-        next unless files.first.start_with?(lib_dir + '/')
-        if files.first[0] != '/' && lib_dir[0] == '/' then
-          lib_path = Pathname.new(lib_dir).relative_path_from(Pathname.pwd)
-        elsif files.first[0] == '/' && lib_dir[0] != '/' then
-          lib_path = Pathname.pwd / lib_dir
-        else
-          lib_path = Pathname.new(lib_dir)
-        end
+        next unless doc_file.start_with?(lib_dir + '/')
+        lib_path = Pathname.new(lib_dir)
         norm_path = doc_path.relative_path_from(lib_path)
         break
       end
