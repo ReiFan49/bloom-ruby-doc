@@ -6,9 +6,15 @@ require 'yard'
 # fetch gem lists from yaml file for easy mod.
 gem_lists = YAML.load(File.read(Dir.pwd + '/gem-lists.yaml'))
 
+GEM_COLLECTION_DATA = []
+
 # library to include configuration
 location_list = gem_lists.keys.map do |lib|
-  Gem.find_files(lib).map do |lib_file|
+  spec = Gem.loaded_specs[lib]
+  fail "Invalid gem." if spec.nil?
+  
+  GEM_COLLECTION_DATA << spec
+  spec.load_paths.map do |lib_file|
     dir = Pathname.new File.dirname(lib_file)
     new_dir = dir.relative_path_from(Pathname.pwd)
     unless new_dir.to_s.include?('../')

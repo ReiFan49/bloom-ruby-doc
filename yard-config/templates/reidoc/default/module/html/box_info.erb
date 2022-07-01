@@ -32,4 +32,11 @@
     <dd><%= mixed_into.sort_by {|o| o.path }.map {|o| linkify(o) }.join(", ") %></dd>
   </dl>
   <% end %>
+  
+  <% unless object.root? %>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><%= erb(:defines) %></dd>
+  </dl>
+  <% end %>
 </div>
