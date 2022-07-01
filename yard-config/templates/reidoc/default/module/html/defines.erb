@@ -30,13 +30,13 @@
 <% unless object.files.empty? then %>
   <%
     have_defines = object.files.size > 1
-    defines_list = object.files.map(&simplify_paths).join(",<br>")
+    defines_list = object.files.map(&simplify_paths)
   %>
   <%=
     if have_defines then
-      sprintf('<%1$s %2$s>%3$s</%1$s>', 'span', 'class="defines"', defines_list)
+      sprintf('%3$s<br><%1$s %2$s>%4$s</%1$s>', 'span', 'class="defines"', defines_list.shift, defines_list.join('<br>'))
     else
-      defines_list
+      defines_list.shift
     end
   %>
 <% else %>
