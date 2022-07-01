@@ -45,8 +45,10 @@ jobs:
       run: |
         bundle exec ruby bin/process-gemcache
         if [[ -f doc/.gemcache ]]; then
+          set +e
           diff -iEbZwBaq .gemcache doc/.gemcache
           echo "IGNORE_DOC_OVERRIDE=$?" >> $GITHUB_ENV
+          set -e
         else
           echo "IGNORE_DOC_OVERRIDE=1" >> $GITHUB_ENV
         fi
