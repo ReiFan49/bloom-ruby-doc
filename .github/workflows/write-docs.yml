@@ -6,7 +6,7 @@ on:
     paths:
     - 'Gemfile'
     - 'gem-lists.yaml'
-    - '.github/workflows/write-docs.yaml'
+    - '.github/workflows/write-docs.yml'
     - 'bin/**'
     - 'yard-config/**'
   repository_dispatch:
@@ -18,10 +18,31 @@ concurrency:
   group: ci-write-docs
   cancel-in-progress: true
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    # Set job outputs to values from filter step
+    outputs:
+      gem-list: ${{ steps.filter.outputs.gems }}
+      gem-internals: ${{ steps.filter.outputs.internals }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          gems:
+          - 'Gemfile'
+          - 'gem-lists.yaml'
+          internals:
+          - '.github/workflows/write-docs.yml'
+          - 'bin/**'
+          - 'yard-config/**'
   publish-docs:
+    needs: changes
     runs-on: ubuntu-latest
     env:
       BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GEM_REPO_ACCESS }}
+      FORCE_DOC_OVERRIDE: ${{ needs.changes.outputs.gem-internals == 'true' }}
     steps:
     - uses: actions/checkout@v2
       with:
@@ -44,7 +65,9 @@ jobs:
     - name: Check Library Cache
       run: |
         bundle exec ruby bin/process-gemcache
-        if [[ -f doc/.gemcache ]]; then
+        if [[ $FORCE_DOC_OVERRIDE = 'true' ]]; then
+          echo "IGNORE_DOC_OVERRIDE=1" >> $GITHUB_ENV
+        elif [[ -f doc/.gemcache ]]; then
           set +e
           diff -iEbZwBaq .gemcache doc/.gemcache
           echo "IGNORE_DOC_OVERRIDE=$?" >> $GITHUB_ENV
@@ -56,14 +79,14 @@ jobs:
       run: |
         bundle exec ruby bin/run-yard stats --list-undoc
     - name: YARD Gem Write
-      if: ${{ env.IGNORE_DOC_OVERRIDE == '1' }}
+      if: ${{ env.IGNORE_DOC_OVERRIDE == '1' || github.event_name == 'workflow_dispatch' }}
       run: |
         bundle exec ruby bin/run-yard doc -r yard-config/README.md \
           -p yard-config/templates/reidoc \
           --hide-void-return
         mv .gemcache doc/.gemcache
     - name: Commit to Docs
-      if: ${{ env.IGNORE_DOC_OVERRIDE == '1' }}
+      if: ${{ env.IGNORE_DOC_OVERRIDE == '1' || github.event_name == 'workflow_dispatch' }}
       working-directory: ./doc
       continue-on-error: true
       run: |
