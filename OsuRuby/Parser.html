@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: OsuRuby::Parser
+  Module: OsuRuby::Parser
   
     &mdash; Documentation by YARD 0.9.28
   
@@ -59,28 +59,12 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: OsuRuby::Parser
+      <div id="content"><h1>Module: OsuRuby::Parser
   
   
   
 </h1>
 <div class="box_info">
-  
-  <dl>
-    <dt>Inherits:</dt>
-    <dd>
-      <span class="inheritName">Object</span>
-      
-        <ul class="fullTree">
-          <li>Object</li>
-          
-            <li class="next">OsuRuby::Parser</li>
-          
-        </ul>
-        <a href="#" class="inheritanceTree">show all</a>
-      
-    </dd>
-  </dl>
   
 
   
@@ -97,154 +81,58 @@
     <dd>
 
   
-  (osu-ruby2 0.0.2) osu-ruby2/parser.rb
+  (osu-ruby2 0.0.2) osu-ruby2/parser.rb<br><span class="defines">(osu-ruby2 0.0.2) osu-ruby2/parser/base.rb<br>(osu-ruby2 0.0.2) osu-ruby2/parser/content.rb</span>
 
 </dd>
   </dl>
   
 </div>
-<div id="subclasses">
-  <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Beatmap/BasicParser.html" title="OsuRuby::Beatmap::BasicParser (class)">Beatmap::BasicParser</a></span>, <span class='object_link'><a href="TextParser.html" title="OsuRuby::TextParser (class)">TextParser</a></span></p>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Personal note of parser classes:</p>
+
+<p>Entry classes are supposed to be the basics of parsing osu!-related files. Section classes are meant to use a parser for it&#39;s whole section.</p>
+
+
+  </div>
 </div>
-
-
-
-
-  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
-  <ul class="summary">
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#io-instance_method" title="#io (instance method)">#<strong>io</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
+<div class="tags">
   
 
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute io.</p>
-</div></span>
-  
-</li>
-
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="IO.html" title="OsuRuby::IO (module)">Raw binary IO processor</a></span></li>
+    
+      <li><span class='object_link'><a href="Database/BaseDB.html" title="OsuRuby::Database::BaseDB (class)">osu! binary read support</a></span></li>
     
   </ul>
 
-
-
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Parser/BarSplitEntry.html" title="OsuRuby::Parser::BarSplitEntry (class)">BarSplitEntry</a></span>, <span class='object_link'><a href="Parser/Base.html" title="OsuRuby::Parser::Base (class)">Base</a></span>, <span class='object_link'><a href="Parser/ColonSplitEntry.html" title="OsuRuby::Parser::ColonSplitEntry (class)">ColonSplitEntry</a></span>, <span class='object_link'><a href="Parser/CommaSplitEntry.html" title="OsuRuby::Parser::CommaSplitEntry (class)">CommaSplitEntry</a></span>, <span class='object_link'><a href="Parser/CommentEntry.html" title="OsuRuby::Parser::CommentEntry (class)">CommentEntry</a></span>, <span class='object_link'><a href="Parser/Entry.html" title="OsuRuby::Parser::Entry (class)">Entry</a></span>, <span class='object_link'><a href="Parser/EntryGroup.html" title="OsuRuby::Parser::EntryGroup (class)">EntryGroup</a></span>, <span class='object_link'><a href="Parser/KeyEntry.html" title="OsuRuby::Parser::KeyEntry (class)">KeyEntry</a></span>, <span class='object_link'><a href="Parser/RawEntry.html" title="OsuRuby::Parser::RawEntry (class)">RawEntry</a></span>, <span class='object_link'><a href="Parser/RawFile.html" title="OsuRuby::Parser::RawFile (class)">RawFile</a></span>, <span class='object_link'><a href="Parser/Section.html" title="OsuRuby::Parser::Section (class)">Section</a></span>, <span class='object_link'><a href="Parser/SplitEntry.html" title="OsuRuby::Parser::SplitEntry (class)">SplitEntry</a></span>
+    
+  
+</p>
 
   
     <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
     </h2>
 
-    <ul class="summary">
+    <dl class="constants">
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(io)  &#x21d2; Parser </a>
-    
-
-    
-  </span>
-  
-  
-    <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>A new instance of Parser.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#parse-instance_method" title="#parse (instance method)">#<strong>parse</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#process-instance_method" title="#process (instance method)">#<strong>process</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-    </ul>
-  
-
-<div id="constructor_details" class="method_details_list">
-  <h2>Constructor Details</h2>
-  
-    <div class="method_details first">
-  <h3 class="signature first" id="initialize-instance_method">
-  
-    #<strong>initialize</strong>(io)  &#x21d2; <tt><span class='object_link'><a href="" title="OsuRuby::Parser (class)">Parser</a></span></tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
+        <dt id="RawSection-constant" class="">RawSection =
+          <div class="docstring">
   <div class="discussion">
     
-<p>Returns a new instance of Parser.</p>
+<p><span class='object_link'><a href="Parser/Section.html" title="OsuRuby::Parser::Section (class)">Section</a></span> that uses only <span class='object_link'><a href="Parser/RawEntry.html" title="OsuRuby::Parser::RawEntry (class)">RawEntry</a></span> parser.</p>
 
 
   </div>
@@ -253,28 +141,14 @@
   
 
 </div>
-</div>
-  
-</div>
-
-  <div id="instance_attr_details" class="attr_details">
-    <h2>Instance Attribute Details</h2>
-    
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="Parser/Section.html" title="OsuRuby::Parser::Section (class)">Section</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Parser/Section.html#create-class_method" title="OsuRuby::Parser::Section.create (method)">create</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Parser/RawEntry.html" title="OsuRuby::Parser::RawEntry (class)">RawEntry</a></span></span><span class='rparen'>)</span></pre></dd>
       
-      <span id=""></span>
-      <div class="method_details first">
-  <h3 class="signature first" id="io-instance_method">
-  
-    #<strong>io</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
+        <dt id="KVSection-constant" class="">KVSection =
+          <div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute io.</p>
+<p><span class='object_link'><a href="Parser/Section.html" title="OsuRuby::Parser::Section (class)">Section</a></span> that uses only <span class='object_link'><a href="Parser/KeyEntry.html" title="OsuRuby::Parser::KeyEntry (class)">KeyEntry</a></span> parser.</p>
 
 
   </div>
@@ -283,45 +157,24 @@
   
 
 </div>
-</div>
-    
-  </div>
-
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="parse-instance_method">
-  
-    #<strong>parse</strong>  &#x21d2; <tt>Object</tt> 
+        </dt>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="Parser/Section.html" title="OsuRuby::Parser::Section (class)">Section</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="Parser/Section.html#create-class_method" title="OsuRuby::Parser::Section.create (method)">create</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Parser/KeyEntry.html" title="OsuRuby::Parser::KeyEntry (class)">KeyEntry</a></span></span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
   
 
-  
 
-  
-</h3>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="process-instance_method">
-  
-    #<strong>process</strong>  &#x21d2; <tt>Object</tt> 
-  
 
-  
 
-  
-</h3>
-</div>
-    
-  </div>
+
+
+
+
 
 </div>
 
       <div id="footer">
-  Generated on Fri Jul  1 02:48:10 2022 by
+  Generated on Sat Jul 30 06:23:09 2022 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.28 (ruby-2.7.6)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc
