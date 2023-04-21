@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+require 'yaml'
+require 'net/https'
+require 'uri'
+
+yaml_file = File.expand_path('../../gem-lists.yaml', __FILE__)
+invalid_keys = []
+data = YAML.load(File.read(yaml_file))
+
+def get_bundler_settings
+  ENV.to_h.select do |k, v|
+    k.start_with?('BUNDLE_')
+  end.transform_keys do |k|
+    k.sub(/^BUNDLE_/, "").gsub(/___/, "-").gsub(/__/, ".").downcase
+  end
+end
+
+not_runner = ENV.fetch('NOT_A_RUNNER', '').empty?
+bundler_env = get_bundler_settings
+
+data.each do |key, opts|
+  next unless opts.key?('gem')
+  next unless opts['gem'].key?('source')
+  next unless opts['gem']['source'].key?('git')
+  
+  git_url = URI.parse(opts.dig('gem', 'source', 'git'))
+  git_actual_url = git_url.dup
+  
+  user_info = bundler_env[git_url.to_s] || bundler_env[git_url.host]
+  # git_url.userinfo ||= user_info
+  
+  IO.popen([
+    'git',
+    '-C', ENV['HOME'],
+    '-c',
+      "http.extraheader=Authorization: Basic #{[user_info].pack('m0')}",
+    'ls-remote', '--quiet', '--exit-code', String(git_url)
+  ], 'r', :err => :out) do |pio|
+    pio.read.tap do |pout|
+      $stderr.puts pout unless not_runner
+    end
+  end
+  
+  is_ok = $?.success?
+  
+  unless is_ok
+    $stderr.puts "Stripped #{git_actual_url} from Gemfile."
+    invalid_keys << key
+  end
+end
+
+data.reject! do |key, opts| invalid_keys.include? key end
+
+fail "Empty gem lists. No need to proceed." if data.empty?
+
+File.write(yaml_file, YAML.dump(data))

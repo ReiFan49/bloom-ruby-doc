@@ -57,6 +57,13 @@ jobs:
         else
           rm -dr doc/**/*
         fi
+    - name: Set up Ruby (No Bundler)
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - name: Ensure Gem List Available
+      run: |
+        ruby bin/ensure-gem-list-smooth
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:

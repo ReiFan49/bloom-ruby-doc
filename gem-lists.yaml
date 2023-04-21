@@ -23,3 +23,9 @@
       git: "https://github.com/ReiFan49/ruby-imgur"
   lib: ruby-imgur
   yard: yard_ext
+"ruby-saucenao":
+  gem:
+    source:
+      git: "https://github.com/ReiFan49/ruby-saucenao"
+  lib: ruby-saucenao
+  yard: yard_ext
