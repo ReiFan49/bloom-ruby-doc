@@ -121,7 +121,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_comment-instance_method" title="#create_comment (instance method)">#<strong>create_comment</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#create_comment-instance_method" title="#create_comment (instance method)">#<strong>create_comment</strong>(body = nil)  &#x21d2; Response::Base </a>
     
 
     
@@ -145,7 +145,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_comment_reply-instance_method" title="#create_comment_reply (instance method)">#<strong>create_comment_reply</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#create_comment_reply-instance_method" title="#create_comment_reply (instance method)">#<strong>create_comment_reply</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -169,7 +169,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_comment-instance_method" title="#delete_comment (instance method)">#<strong>delete_comment</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#delete_comment-instance_method" title="#delete_comment (instance method)">#<strong>delete_comment</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -193,7 +193,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#do_comment_report-instance_method" title="#do_comment_report (instance method)">#<strong>do_comment_report</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#do_comment_report-instance_method" title="#do_comment_report (instance method)">#<strong>do_comment_report</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -217,7 +217,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#do_comment_vote-instance_method" title="#do_comment_vote (instance method)">#<strong>do_comment_vote</strong>(body = nil, id:, vote:, **data)  &#x21d2; JSON </a>
+      <a href="#do_comment_vote-instance_method" title="#do_comment_vote (instance method)">#<strong>do_comment_vote</strong>(body = nil, id:, vote:)  &#x21d2; Response::Base </a>
     
 
     
@@ -241,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_comment-instance_method" title="#get_comment (instance method)">#<strong>get_comment</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#get_comment-instance_method" title="#get_comment (instance method)">#<strong>get_comment</strong>(body = nil, id:)  &#x21d2; Response::Base&lt;Model::Comment&gt; </a>
     
 
     
@@ -265,7 +265,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_comment_replies-instance_method" title="#get_comment_replies (instance method)">#<strong>get_comment_replies</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#get_comment_replies-instance_method" title="#get_comment_replies (instance method)">#<strong>get_comment_replies</strong>(body = nil, id:)  &#x21d2; Response::Base&lt;Array&lt;Model::Comment&gt;&gt; </a>
     
 
     
@@ -304,7 +304,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="create_comment-instance_method">
   
-    #<strong>create_comment</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>create_comment</strong>(body = nil)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -319,14 +319,34 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/comment</code></p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -345,7 +365,7 @@
       <div class="method_details ">
   <h3 class="signature " id="create_comment_reply-instance_method">
   
-    #<strong>create_comment_reply</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>create_comment_reply</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -379,6 +399,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/comment/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -387,7 +423,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -406,7 +442,7 @@
       <div class="method_details ">
   <h3 class="signature " id="delete_comment-instance_method">
   
-    #<strong>delete_comment</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>delete_comment</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -440,6 +476,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/comment/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -448,7 +500,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -467,7 +519,7 @@
       <div class="method_details ">
   <h3 class="signature " id="do_comment_report-instance_method">
   
-    #<strong>do_comment_report</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>do_comment_report</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -501,6 +553,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/comment/:id/report</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -509,7 +577,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -528,7 +596,7 @@
       <div class="method_details ">
   <h3 class="signature " id="do_comment_vote-instance_method">
   
-    #<strong>do_comment_vote</strong>(body = nil, id:, vote:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>do_comment_vote</strong>(body = nil, id:, vote:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -578,6 +646,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/comment/:id/vote/:vote</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -586,7 +670,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -605,7 +689,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_comment-instance_method">
   
-    #<strong>get_comment</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_comment</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Comment.html" title="Imgur::Model::Comment (class)">Model::Comment</a></span>&gt;</tt> 
   
 
   
@@ -639,6 +723,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/comment/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -647,7 +747,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Comment.html" title="Imgur::Model::Comment (class)">Model::Comment</a></span>&gt;</tt>)</span>
       
       
       
@@ -666,7 +766,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_comment_replies-instance_method">
   
-    #<strong>get_comment_replies</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_comment_replies</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Comment.html" title="Imgur::Model::Comment (class)">Model::Comment</a></span>&gt;&gt;</tt> 
   
 
   
@@ -700,6 +800,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/comment/:id/replies</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -708,7 +824,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Comment.html" title="Imgur::Model::Comment (class)">Model::Comment</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -729,7 +845,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 22 02:23:59 2023 by
+  Generated on Sat Apr 22 06:10:26 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.8)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

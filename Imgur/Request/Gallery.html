@@ -127,7 +127,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_gallery_comments-instance_method" title="#get_gallery_comments (instance method)">#<strong>get_gallery_comments</strong>(body = nil, id:, sort:, **data)  &#x21d2; JSON </a>
+      <a href="#get_gallery_comments-instance_method" title="#get_gallery_comments (instance method)">#<strong>get_gallery_comments</strong>(body = nil, id:, **data)  &#x21d2; Response::Base&lt;Array&lt;Model::Comment&gt;&gt; </a>
     
 
     
@@ -151,7 +151,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_gallery_list-instance_method" title="#get_gallery_list (instance method)">#<strong>get_gallery_list</strong>(body = nil, section:, sort:, window:, page:, **data)  &#x21d2; JSON </a>
+      <a href="#get_gallery_list-instance_method" title="#get_gallery_list (instance method)">#<strong>get_gallery_list</strong>(body = nil, **data)  &#x21d2; Response::Base&lt;Array&lt;Model::Gallery&gt;&gt; </a>
     
 
     
@@ -190,7 +190,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="get_gallery_comments-instance_method">
   
-    #<strong>get_gallery_comments</strong>(body = nil, id:, sort:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_gallery_comments</strong>(body = nil, id:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Comment.html" title="Imgur::Model::Comment (class)">Model::Comment</a></span>&gt;&gt;</tt> 
   
 
   
@@ -226,22 +226,6 @@
   
     <li>
       
-        <span class='name'>sort</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>data</span>
       
       
@@ -251,7 +235,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/gallery/:id/comments/:sort?</code></p>
+<p>additional keys accepted for <code>/gallery/:id/comments/:sort?</code></p>
 </div>
       
     </li>
@@ -265,13 +249,11 @@
     
     
     
-    
-    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">sort?</span>
+          <span class="name">sort</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -288,7 +270,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Comment.html" title="Imgur::Model::Comment (class)">Model::Comment</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -307,7 +289,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_gallery_list-instance_method">
   
-    #<strong>get_gallery_list</strong>(body = nil, section:, sort:, window:, page:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_gallery_list</strong>(body = nil, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Gallery.html" title="Imgur::Model::Gallery (class)">Model::Gallery</a></span>&gt;&gt;</tt> 
   
 
   
@@ -327,70 +309,6 @@
   
     <li>
       
-        <span class='name'>section</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>sort</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>window</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>page</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>data</span>
       
       
@@ -400,7 +318,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <tt>/gallery/:section?/:sort?/:window?/:page?</tt></p>
+<p>additional keys accepted for <tt>/gallery/:section?/:sort?/:window?/:page?</tt></p>
 </div>
       
     </li>
@@ -412,19 +330,11 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">section?</span>
+          <span class="name">section</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -433,7 +343,7 @@
         </li>
       
         <li>
-          <span class="name">sort?</span>
+          <span class="name">sort</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -442,7 +352,7 @@
         </li>
       
         <li>
-          <span class="name">window?</span>
+          <span class="name">window</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -451,7 +361,7 @@
         </li>
       
         <li>
-          <span class="name">page?</span>
+          <span class="name">page</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -495,7 +405,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Gallery.html" title="Imgur::Model::Gallery (class)">Model::Gallery</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -516,7 +426,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 22 02:23:59 2023 by
+  Generated on Sat Apr 22 06:10:26 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.8)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

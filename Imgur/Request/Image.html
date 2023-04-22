@@ -121,7 +121,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_image-instance_method" title="#delete_image (instance method)">#<strong>delete_image</strong>(body = nil, key:, **data)  &#x21d2; JSON </a>
+      <a href="#delete_image-instance_method" title="#delete_image (instance method)">#<strong>delete_image</strong>(body = nil, key:)  &#x21d2; Response::Base </a>
     
 
     
@@ -145,7 +145,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#do_image_favorite-instance_method" title="#do_image_favorite (instance method)">#<strong>do_image_favorite</strong>(body = nil, key:, **data)  &#x21d2; JSON </a>
+      <a href="#do_image_favorite-instance_method" title="#do_image_favorite (instance method)">#<strong>do_image_favorite</strong>(body = nil, key:)  &#x21d2; Response::Base </a>
     
 
     
@@ -169,7 +169,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_image-instance_method" title="#get_image (instance method)">#<strong>get_image</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#get_image-instance_method" title="#get_image (instance method)">#<strong>get_image</strong>(body = nil, id:)  &#x21d2; Response::Base&lt;Model::Image&gt; </a>
     
 
     
@@ -193,7 +193,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update_image_info-instance_method" title="#update_image_info (instance method)">#<strong>update_image_info</strong>(body = nil, key:, **data)  &#x21d2; JSON </a>
+      <a href="#update_image_info-instance_method" title="#update_image_info (instance method)">#<strong>update_image_info</strong>(body = nil, key:)  &#x21d2; Response::Base </a>
     
 
     
@@ -217,7 +217,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#upload_image-instance_method" title="#upload_image (instance method)">#<strong>upload_image</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#upload_image-instance_method" title="#upload_image (instance method)">#<strong>upload_image</strong>(body = nil)  &#x21d2; Response::Base&lt;Model::Image&gt; </a>
     
 
     
@@ -256,7 +256,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="delete_image-instance_method">
   
-    #<strong>delete_image</strong>(body = nil, key:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>delete_image</strong>(body = nil, key:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -290,6 +290,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/image/:key</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -298,7 +314,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -317,7 +333,7 @@
       <div class="method_details ">
   <h3 class="signature " id="do_image_favorite-instance_method">
   
-    #<strong>do_image_favorite</strong>(body = nil, key:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>do_image_favorite</strong>(body = nil, key:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -351,6 +367,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/image/:key/favorite</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -359,7 +391,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -378,7 +410,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_image-instance_method">
   
-    #<strong>get_image</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_image</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;</tt> 
   
 
   
@@ -412,6 +444,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/image/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -420,7 +468,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;</tt>)</span>
       
       
       
@@ -439,7 +487,7 @@
       <div class="method_details ">
   <h3 class="signature " id="update_image_info-instance_method">
   
-    #<strong>update_image_info</strong>(body = nil, key:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>update_image_info</strong>(body = nil, key:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -473,6 +521,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/image/:key</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -481,7 +545,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -500,7 +564,7 @@
       <div class="method_details ">
   <h3 class="signature " id="upload_image-instance_method">
   
-    #<strong>upload_image</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>upload_image</strong>(body = nil)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;</tt> 
   
 
   
@@ -515,14 +579,34 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/upload</code></p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;</tt>)</span>
       
       
       
@@ -543,7 +627,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 22 02:23:59 2023 by
+  Generated on Sat Apr 22 06:10:26 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.8)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

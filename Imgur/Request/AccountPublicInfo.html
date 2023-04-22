@@ -121,7 +121,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_available_avatars-instance_method" title="#get_account_available_avatars (instance method)">#<strong>get_account_available_avatars</strong>(body = nil, username:, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_available_avatars-instance_method" title="#get_account_available_avatars (instance method)">#<strong>get_account_available_avatars</strong>(body = nil, username:)  &#x21d2; Response::Base </a>
     
 
     
@@ -145,7 +145,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_avatar-instance_method" title="#get_account_avatar (instance method)">#<strong>get_account_avatar</strong>(body = nil, username:, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_avatar-instance_method" title="#get_account_avatar (instance method)">#<strong>get_account_avatar</strong>(body = nil, username:)  &#x21d2; Response::Base </a>
     
 
     
@@ -169,7 +169,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_default_avatars-instance_method" title="#get_account_default_avatars (instance method)">#<strong>get_account_default_avatars</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_default_avatars-instance_method" title="#get_account_default_avatars (instance method)">#<strong>get_account_default_avatars</strong>(body = nil)  &#x21d2; Response::Base </a>
     
 
     
@@ -193,7 +193,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_favorites-instance_method" title="#get_account_favorites (instance method)">#<strong>get_account_favorites</strong>(body = nil, username:, page:, sort:, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_favorites-instance_method" title="#get_account_favorites (instance method)">#<strong>get_account_favorites</strong>(body = nil, username:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -217,7 +217,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_gallery_favorites-instance_method" title="#get_account_gallery_favorites (instance method)">#<strong>get_account_gallery_favorites</strong>(body = nil, username:, page:, sort:, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_gallery_favorites-instance_method" title="#get_account_gallery_favorites (instance method)">#<strong>get_account_gallery_favorites</strong>(body = nil, username:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -241,7 +241,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_submissions-instance_method" title="#get_account_submissions (instance method)">#<strong>get_account_submissions</strong>(body = nil, username:, page:, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_submissions-instance_method" title="#get_account_submissions (instance method)">#<strong>get_account_submissions</strong>(body = nil, username:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -280,7 +280,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="get_account_available_avatars-instance_method">
   
-    #<strong>get_account_available_avatars</strong>(body = nil, username:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_available_avatars</strong>(body = nil, username:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -314,6 +314,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/account/:username/available_avatars</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -322,7 +338,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -341,7 +357,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_avatar-instance_method">
   
-    #<strong>get_account_avatar</strong>(body = nil, username:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_avatar</strong>(body = nil, username:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -375,6 +391,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/account/:username/avatar</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -383,7 +415,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -402,7 +434,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_default_avatars-instance_method">
   
-    #<strong>get_account_default_avatars</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_default_avatars</strong>(body = nil)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -417,14 +449,34 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/account/available_avatars</code></p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -443,7 +495,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_favorites-instance_method">
   
-    #<strong>get_account_favorites</strong>(body = nil, username:, page:, sort:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_favorites</strong>(body = nil, username:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -479,38 +531,6 @@
   
     <li>
       
-        <span class='name'>page</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>sort</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>data</span>
       
       
@@ -520,7 +540,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <tt>/account/:username/favorites/:page?/:sort?</tt></p>
+<p>additional keys accepted for <tt>/account/:username/favorites/:page?/:sort?</tt></p>
 </div>
       
     </li>
@@ -534,15 +554,11 @@
     
     
     
-    
-    
-    
-    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">page?</span>
+          <span class="name">page</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -551,7 +567,7 @@
         </li>
       
         <li>
-          <span class="name">sort?</span>
+          <span class="name">sort</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -568,7 +584,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -587,7 +603,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_gallery_favorites-instance_method">
   
-    #<strong>get_account_gallery_favorites</strong>(body = nil, username:, page:, sort:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_gallery_favorites</strong>(body = nil, username:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -623,38 +639,6 @@
   
     <li>
       
-        <span class='name'>page</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>sort</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>data</span>
       
       
@@ -664,7 +648,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <tt>/account/:username/gallery_favorites/:page?/:sort?</tt></p>
+<p>additional keys accepted for <tt>/account/:username/gallery_favorites/:page?/:sort?</tt></p>
 </div>
       
     </li>
@@ -678,15 +662,11 @@
     
     
     
-    
-    
-    
-    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">page?</span>
+          <span class="name">page</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -695,7 +675,7 @@
         </li>
       
         <li>
-          <span class="name">sort?</span>
+          <span class="name">sort</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -712,7 +692,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -731,7 +711,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_submissions-instance_method">
   
-    #<strong>get_account_submissions</strong>(body = nil, username:, page:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_submissions</strong>(body = nil, username:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -767,22 +747,6 @@
   
     <li>
       
-        <span class='name'>page</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>data</span>
       
       
@@ -792,7 +756,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/account/:username/submissions/:page?</code></p>
+<p>additional keys accepted for <code>/account/:username/submissions/:page?</code></p>
 </div>
       
     </li>
@@ -806,13 +770,11 @@
     
     
     
-    
-    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">page?</span>
+          <span class="name">page</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -829,7 +791,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -850,7 +812,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 22 02:23:59 2023 by
+  Generated on Sat Apr 22 06:10:25 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.8)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

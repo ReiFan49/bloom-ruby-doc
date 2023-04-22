@@ -110,7 +110,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_user-instance_method" title="#get_user (instance method)">#<strong>get_user</strong>(body = nil, user:, mode:, **data)  &#x21d2; JSON </a>
+      <a href="#get_user-instance_method" title="#get_user (instance method)">#<strong>get_user</strong>(body = nil, user:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -134,7 +134,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_user_activity-instance_method" title="#get_user_activity (instance method)">#<strong>get_user_activity</strong>(body = nil, user:, **data)  &#x21d2; JSON </a>
+      <a href="#get_user_activity-instance_method" title="#get_user_activity (instance method)">#<strong>get_user_activity</strong>(body = nil, user:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -158,7 +158,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_user_beatmaps-instance_method" title="#get_user_beatmaps (instance method)">#<strong>get_user_beatmaps</strong>(body = nil, user:, type:, **data)  &#x21d2; JSON </a>
+      <a href="#get_user_beatmaps-instance_method" title="#get_user_beatmaps (instance method)">#<strong>get_user_beatmaps</strong>(body = nil, user:, type:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -182,7 +182,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_user_kudosu-instance_method" title="#get_user_kudosu (instance method)">#<strong>get_user_kudosu</strong>(body = nil, user:, **data)  &#x21d2; JSON </a>
+      <a href="#get_user_kudosu-instance_method" title="#get_user_kudosu (instance method)">#<strong>get_user_kudosu</strong>(body = nil, user:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -206,7 +206,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_user_scores-instance_method" title="#get_user_scores (instance method)">#<strong>get_user_scores</strong>(body = nil, user:, type:, **data)  &#x21d2; JSON </a>
+      <a href="#get_user_scores-instance_method" title="#get_user_scores (instance method)">#<strong>get_user_scores</strong>(body = nil, user:, type:, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -230,7 +230,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_user_self-instance_method" title="#get_user_self (instance method)">#<strong>get_user_self</strong>(body = nil, mode:, **data)  &#x21d2; JSON </a>
+      <a href="#get_user_self-instance_method" title="#get_user_self (instance method)">#<strong>get_user_self</strong>(body = nil, **data)  &#x21d2; Response::Base </a>
     
 
     
@@ -269,7 +269,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="get_user-instance_method">
   
-    #<strong>get_user</strong>(body = nil, user:, mode:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_user</strong>(body = nil, user:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -305,22 +305,6 @@
   
     <li>
       
-        <span class='name'>mode</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>data</span>
       
       
@@ -330,7 +314,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/users/:user/:mode?</code></p>
+<p>additional keys accepted for <code>/users/:user/:mode?</code></p>
 </div>
       
     </li>
@@ -344,13 +328,11 @@
     
     
     
-    
-    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">mode?</span>
+          <span class="name">mode</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -376,7 +358,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -395,7 +377,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_user_activity-instance_method">
   
-    #<strong>get_user_activity</strong>(body = nil, user:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_user_activity</strong>(body = nil, user:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -440,7 +422,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/users/:user/recent_activity</code></p>
+<p>additional keys accepted for <code>/users/:user/recent_activity</code></p>
 </div>
       
     </li>
@@ -484,7 +466,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -503,7 +485,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_user_beatmaps-instance_method">
   
-    #<strong>get_user_beatmaps</strong>(body = nil, user:, type:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_user_beatmaps</strong>(body = nil, user:, type:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -564,7 +546,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/users/:user/beatmapsets/:type</code></p>
+<p>additional keys accepted for <code>/users/:user/beatmapsets/:type</code></p>
 </div>
       
     </li>
@@ -610,7 +592,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -629,7 +611,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_user_kudosu-instance_method">
   
-    #<strong>get_user_kudosu</strong>(body = nil, user:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_user_kudosu</strong>(body = nil, user:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -674,7 +656,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/users/:user/kudosu</code></p>
+<p>additional keys accepted for <code>/users/:user/kudosu</code></p>
 </div>
       
     </li>
@@ -718,7 +700,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -737,7 +719,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_user_scores-instance_method">
   
-    #<strong>get_user_scores</strong>(body = nil, user:, type:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_user_scores</strong>(body = nil, user:, type:, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -798,7 +780,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/users/:user/scores/:type</code></p>
+<p>additional keys accepted for <code>/users/:user/scores/:type</code></p>
 </div>
       
     </li>
@@ -862,7 +844,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -881,7 +863,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_user_self-instance_method">
   
-    #<strong>get_user_self</strong>(body = nil, mode:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_user_self</strong>(body = nil, **data)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -901,22 +883,6 @@
   
     <li>
       
-        <span class='name'>mode</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p><strong>Required</strong></p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>data</span>
       
       
@@ -926,7 +892,7 @@
       
         &mdash;
         <div class='inline'>
-<p>Accepted keys accepted by <code>/me/:mode?</code></p>
+<p>additional keys accepted for <code>/me/:mode?</code></p>
 </div>
       
     </li>
@@ -938,13 +904,11 @@
     
     
     
-    
-    
     <p class="tag_title">Options Hash (<tt>**data</tt>):</p>
     <ul class="option">
       
         <li>
-          <span class="name">mode?</span>
+          <span class="name">mode</span>
           <span class="type">(<tt>String</tt>)</span>
           <span class="default">
             
@@ -961,7 +925,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="OsuAPI::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -982,7 +946,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 22 02:23:59 2023 by
+  Generated on Sat Apr 22 06:10:26 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.8)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

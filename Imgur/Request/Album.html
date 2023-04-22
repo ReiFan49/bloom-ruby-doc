@@ -127,7 +127,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_album_images-instance_method" title="#add_album_images (instance method)">#<strong>add_album_images</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#add_album_images-instance_method" title="#add_album_images (instance method)">#<strong>add_album_images</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -151,7 +151,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create_album-instance_method" title="#create_album (instance method)">#<strong>create_album</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#create_album-instance_method" title="#create_album (instance method)">#<strong>create_album</strong>(body = nil)  &#x21d2; Response::Base </a>
     
 
     
@@ -175,7 +175,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#delete_album-instance_method" title="#delete_album (instance method)">#<strong>delete_album</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#delete_album-instance_method" title="#delete_album (instance method)">#<strong>delete_album</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -199,7 +199,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#do_album_favorite-instance_method" title="#do_album_favorite (instance method)">#<strong>do_album_favorite</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#do_album_favorite-instance_method" title="#do_album_favorite (instance method)">#<strong>do_album_favorite</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -223,7 +223,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_album-instance_method" title="#get_album (instance method)">#<strong>get_album</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#get_album-instance_method" title="#get_album (instance method)">#<strong>get_album</strong>(body = nil, id:)  &#x21d2; Response::Base&lt;Model::Album&gt; </a>
     
 
     
@@ -247,7 +247,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_album_image-instance_method" title="#get_album_image (instance method)">#<strong>get_album_image</strong>(body = nil, id:, image_id:, **data)  &#x21d2; JSON </a>
+      <a href="#get_album_image-instance_method" title="#get_album_image (instance method)">#<strong>get_album_image</strong>(body = nil, id:, image_id:)  &#x21d2; Response::Base&lt;Model::Image&gt; </a>
     
 
     
@@ -271,7 +271,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_album_images-instance_method" title="#get_album_images (instance method)">#<strong>get_album_images</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#get_album_images-instance_method" title="#get_album_images (instance method)">#<strong>get_album_images</strong>(body = nil, id:)  &#x21d2; Response::Base&lt;Array&lt;Model::Image&gt;&gt; </a>
     
 
     
@@ -295,7 +295,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#remove_album_images-instance_method" title="#remove_album_images (instance method)">#<strong>remove_album_images</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#remove_album_images-instance_method" title="#remove_album_images (instance method)">#<strong>remove_album_images</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -319,7 +319,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_album_images-instance_method" title="#set_album_images (instance method)">#<strong>set_album_images</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#set_album_images-instance_method" title="#set_album_images (instance method)">#<strong>set_album_images</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -343,7 +343,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update_album-instance_method" title="#update_album (instance method)">#<strong>update_album</strong>(body = nil, id:, **data)  &#x21d2; JSON </a>
+      <a href="#update_album-instance_method" title="#update_album (instance method)">#<strong>update_album</strong>(body = nil, id:)  &#x21d2; Response::Base </a>
     
 
     
@@ -382,7 +382,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="add_album_images-instance_method">
   
-    #<strong>add_album_images</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>add_album_images</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -416,6 +416,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id/add</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -424,7 +440,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -443,7 +459,7 @@
       <div class="method_details ">
   <h3 class="signature " id="create_album-instance_method">
   
-    #<strong>create_album</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>create_album</strong>(body = nil)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -458,14 +474,34 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album</code></p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -484,7 +520,7 @@
       <div class="method_details ">
   <h3 class="signature " id="delete_album-instance_method">
   
-    #<strong>delete_album</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>delete_album</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -518,6 +554,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -526,7 +578,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -545,7 +597,7 @@
       <div class="method_details ">
   <h3 class="signature " id="do_album_favorite-instance_method">
   
-    #<strong>do_album_favorite</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>do_album_favorite</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -579,6 +631,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id/favorite</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -587,7 +655,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -606,7 +674,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_album-instance_method">
   
-    #<strong>get_album</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_album</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Album.html" title="Imgur::Model::Album (class)">Model::Album</a></span>&gt;</tt> 
   
 
   
@@ -640,6 +708,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -648,7 +732,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Album.html" title="Imgur::Model::Album (class)">Model::Album</a></span>&gt;</tt>)</span>
       
       
       
@@ -667,7 +751,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_album_image-instance_method">
   
-    #<strong>get_album_image</strong>(body = nil, id:, image_id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_album_image</strong>(body = nil, id:, image_id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;</tt> 
   
 
   
@@ -717,6 +801,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id/image/:image_id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -725,7 +825,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;</tt>)</span>
       
       
       
@@ -744,7 +844,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_album_images-instance_method">
   
-    #<strong>get_album_images</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_album_images</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;&gt;</tt> 
   
 
   
@@ -778,6 +878,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id/images</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -786,7 +902,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span>&lt;Array&lt;<span class='object_link'><a href="../Model/Image.html" title="Imgur::Model::Image (class)">Model::Image</a></span>&gt;&gt;</tt>)</span>
       
       
       
@@ -805,7 +921,7 @@
       <div class="method_details ">
   <h3 class="signature " id="remove_album_images-instance_method">
   
-    #<strong>remove_album_images</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>remove_album_images</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -839,6 +955,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id/remove_images</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -847,7 +979,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -866,7 +998,7 @@
       <div class="method_details ">
   <h3 class="signature " id="set_album_images-instance_method">
   
-    #<strong>set_album_images</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>set_album_images</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -900,6 +1032,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -908,7 +1056,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -927,7 +1075,7 @@
       <div class="method_details ">
   <h3 class="signature " id="update_album-instance_method">
   
-    #<strong>update_album</strong>(body = nil, id:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>update_album</strong>(body = nil, id:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -961,6 +1109,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/album/:id</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -969,7 +1133,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -990,7 +1154,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 22 02:23:59 2023 by
+  Generated on Sat Apr 22 06:10:26 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.8)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc

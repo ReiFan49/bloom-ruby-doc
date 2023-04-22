@@ -121,7 +121,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_block-instance_method" title="#get_account_block (instance method)">#<strong>get_account_block</strong>(body = nil, username:, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_block-instance_method" title="#get_account_block (instance method)">#<strong>get_account_block</strong>(body = nil, username:)  &#x21d2; Response::Base </a>
     
 
     
@@ -145,7 +145,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_account_block_list-instance_method" title="#get_account_block_list (instance method)">#<strong>get_account_block_list</strong>(body = nil, **data)  &#x21d2; JSON </a>
+      <a href="#get_account_block_list-instance_method" title="#get_account_block_list (instance method)">#<strong>get_account_block_list</strong>(body = nil)  &#x21d2; Response::Base </a>
     
 
     
@@ -169,7 +169,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#set_account_block-instance_method" title="#set_account_block (instance method)">#<strong>set_account_block</strong>(body = nil, username:, **data)  &#x21d2; JSON </a>
+      <a href="#set_account_block-instance_method" title="#set_account_block (instance method)">#<strong>set_account_block</strong>(body = nil, username:)  &#x21d2; Response::Base </a>
     
 
     
@@ -193,7 +193,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#unset_account_block-instance_method" title="#unset_account_block (instance method)">#<strong>unset_account_block</strong>(body = nil, username:, **data)  &#x21d2; JSON </a>
+      <a href="#unset_account_block-instance_method" title="#unset_account_block (instance method)">#<strong>unset_account_block</strong>(body = nil, username:)  &#x21d2; Response::Base </a>
     
 
     
@@ -232,7 +232,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="get_account_block-instance_method">
   
-    #<strong>get_account_block</strong>(body = nil, username:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_block</strong>(body = nil, username:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -266,6 +266,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/account/:username/block</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -274,7 +290,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -293,7 +309,7 @@
       <div class="method_details ">
   <h3 class="signature " id="get_account_block_list-instance_method">
   
-    #<strong>get_account_block_list</strong>(body = nil, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>get_account_block_list</strong>(body = nil)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -308,14 +324,34 @@
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/account/me/block</code></p>
+</div>
+      
+    </li>
+  
+</ul>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -334,7 +370,7 @@
       <div class="method_details ">
   <h3 class="signature " id="set_account_block-instance_method">
   
-    #<strong>set_account_block</strong>(body = nil, username:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>set_account_block</strong>(body = nil, username:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -368,6 +404,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/account/:username/block</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -376,7 +428,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -395,7 +447,7 @@
       <div class="method_details ">
   <h3 class="signature " id="unset_account_block-instance_method">
   
-    #<strong>unset_account_block</strong>(body = nil, username:, **data)  &#x21d2; <tt>JSON</tt> 
+    #<strong>unset_account_block</strong>(body = nil, username:)  &#x21d2; <tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt> 
   
 
   
@@ -429,6 +481,22 @@
       
     </li>
   
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>additional keys accepted for <code>/account/:username/block</code></p>
+</div>
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -437,7 +505,7 @@
     <li>
       
       
-        <span class='type'>(<tt>JSON</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../Response/Base.html" title="Imgur::Response::Base (class)">Response::Base</a></span></tt>)</span>
       
       
       
@@ -458,7 +526,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 22 02:23:59 2023 by
+  Generated on Sat Apr 22 06:10:25 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-2.7.8)
   using <a href="https://github.com/ReiFan49/bloom-ruby-doc
